@@ -126,12 +126,18 @@ function buildMap(geoData) {
         const coordinates = feature.geometry.coordinates;
 
         // Поиск англ. названия в свойствах
-        let engName = feature.properties.nam || feature.properties.name || "Region";
-        // Убираем приставки вроде "-ken", "-to", "-fu" если они есть (в dataofjapan обычно без них, но на всякий случай)
-        engName = engName.replace(/-ken|-to|-fu|-do/g, '');
-
-        // Переводим на русский
-        const ruName = prefTranslations[engName] || engName;
+        const engName = feature.properties.nam || feature.properties.name || feature.properties.nam_en || "Region";
+        
+        let ruName = engName;
+        // Подготавливаем строку для умного поиска
+        const lowerEng = engName.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
+        for (const key in prefTranslations) {
+            const lowerKey = key.toLowerCase();
+            if (lowerEng === lowerKey || lowerEng.startsWith(lowerKey)) {
+                ruName = prefTranslations[key];
+                break;
+            }
+        }
 
         if (geometryType === 'Polygon') {
             createPolygonShape(coordinates[0], projection, material, extrudeSettings, ruName);
@@ -260,7 +266,7 @@ function onClick() {
     if (hoveredMesh) {
         const cityName = hoveredMesh.userData.name;
         // Переход на созданный HTML-файл города/региона
-        window.location.href = `${cityName}.html`;
+        window.location.href = cityName + ".html";
     }
 }
 
