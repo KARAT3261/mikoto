@@ -1,52 +1,104 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Киото - Древняя Столица</title>
+    <title>Киото — Сердце Японии | Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/киото.css">
 </head>
+<body class="kyoto-body">
+    <nav class="kyoto-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
 
-<body>
     <div class="kyoto-container">
-        <nav class="kyoto-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="kyoto-header">
+            <h1 class="kyoto-huge-title">Киото</h1>
+            <p class="kyoto-subtitle">Культурное сердце и вечная столица Японии</p>
+        </header>
 
-        <!-- Картинки (Слайдер) -->
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <!-- Используем качественные фото Киото с Unsplash -->
-                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop"
-                    alt="Kyoto temple">
-                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop"
-                    alt="Kyoto street">
-                <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=2070&auto=format&fit=crop"
-                    alt="Kyoto nature">
-                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop"
-                    alt="Kyoto temple clone"> <!-- Для плавного зацикливания -->
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Киото весной">
+                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop" alt="Золотой павильон">
+                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop" alt="Улочки Киото">
             </div>
-
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
 
         <div class="kyoto-info">
-            <h1 class="kyoto-huge-title">Киото</h1>
-
             <div class="wiki-desc">
-                <p>Кио́то (яп. 京都市 Кё:то-си) — японский город, расположенный в центральной части острова Хонсю, в центре
-                    региона Кансай. Является административным центром префектуры Киото.</p>
-                <p>Один из ведущих городов региона Кансай. Город имеет богатейшую историю: в течение более чем
-                    тысячелетия (с 794 по 1869 годы) он был столицей Японии и главной резиденцией Императоров. Старое
-                    название города — Хэйан.</p>
+                <p class="intro-text">«Киото — это место, где время замедляется, а каждый шаг по древним камням отзывается эхом тысячи лет истории.»</p>
+                <p>Почему Киото обязателен к посещению? Это город, где японская эстетика достигла своего абсолютного пика. Здесь вы не просто осматриваете достопримечательности, вы погружаетесь в атмосферу «ваби-саби» — красоты несовершенства и мимолетности.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D0%BD%D0%BA%D0%B0%D0%BA%D1%83-%D0%B4%D0%B7%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=800" alt="Кинкаку-дзи" class="story-image">
+                        <div class="story-content">
+                            <h3>Кинкаку-дзи</h3>
+                            <p>Золотой павильон — дзен-буддийский храм, два верхних этажа которого полностью покрыты листами чистого золота. Его отражение в «Зеркальном озере» — один из самых прекрасных видов в Японии.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%A4%D1%83%D1%81%D0%B8%D0%BC%D0%B8_%D0%98%D0%BD%D0%B0%D1%80%D0%B8-%D1%82%D0%B0%D0%B9%D1%81%D1%8F" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800" alt="Фусими Инари" class="story-image">
+                        <div class="story-content">
+                            <h3>Фусими Инари</h3>
+                            <p>Главное святилище бога Инари. Тысячи ярко-красных ворот торий образуют бесконечные туннели по склонам священной горы, создавая мистический путь к небесам.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9A%D0%B8%D0%BE%D1%82%D0%BE" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Киёмидзу-дэра" class="story-image">
+                        <div class="story-content">
+                            <h3>Киёмидзу-дэра</h3>
+                            <p>«Храм чистой воды». Его знаменитая деревянная веранда, построенная без единого гвоздя, буквально парит над лесом, предлагая захватывающий вид на город.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%A5%D1%8D%D0%B9%D0%B0%D0%BD-%D0%BA%D1%91" target="_blank" class="history-link"><strong>Хэйан-кё (794–1868):</strong></a> Основанный как «Столица мира и спокойствия», Киото был резиденцией Императора более тысячи лет. Здесь расцветала поэзия, чайная церемония и искусство кабуки.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%90%D1%82%D0%BE%D0%BC%D0%BD%D1%8B%D0%B5_%D0%B1%D0%BE%D0%BC%D0%B1%D0%B0%D1%80%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8_%D0%A5%D0%B8%D1%80%D0%BE%D1%81%D0%B8%D0%BC%D1%8B_%D0%B8_%D0%9D%D0%B0%D0%B3%D0%B0%D1%81%D0%B0%D0%BA%D0%B8#.D0.92.D1.8B.D0.B1.D0.BE.D1.80_.D1.86.D0.B5.D0.BB.D0.B5.D0.B9" target="_blank" class="history-link"><strong>Чудо спасения:</strong></a> Знаете ли вы, что Киото мог разделить судьбу Хиросимы? Американский военный министр Генри Стимсон настоял на исключении города из списка ядерных целей из уважения к его культуре.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B8%D0%BE%D0%BD-%D0%BC%D0%B0%D1%86%D1%83%D1%80%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Сусаноо и буря" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Божество</span>
+                            <h3>Сусаноо-но-Микото</h3>
+                            <p>Могущественный бог штормов. Легенда гласит, что фестиваль Гион Мацури — это вечный диалог между горожанами и непредсказуемым гневом этого божества.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D0%B0%D1%80%D0%B8_(%D1%81%D0%B8%D0%BD%D1%82%D0%BE%D0%B8%D0%B7%D0%BC)" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Инари и лис" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Божество</span>
+                            <h3>Инари Оками</h3>
+                            <p>Божество изобилия. Его посланники — кицунэ — охраняют тысячи святилищ Киото, следя за тем, чтобы рис всегда был в достатке, а бизнес процветал.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -57,58 +109,43 @@
             const images = slide.querySelectorAll('img');
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
-
             let counter = 0;
-            const size = images[0].clientWidth;
-            const totalImages = images.length - 1; // последний - клон первого для зацикливания если нужно, но проще просто гонять
-
-            // Автоматическое переключение
-            let autoSlide = setInterval(() => {
-                moveToNext();
-            }, 3000);
-
+            
             function updateSlidePosition() {
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
-                slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+                slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
 
-            function moveToNext() {
-                if (counter >= totalImages - 1) { // Возврат на первую
-                    counter = 0;
-                } else {
-                    counter++;
-                }
-                updateSlidePosition();
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
             }
 
-            function moveToPrev() {
-                if (counter <= 0) {
-                    counter = totalImages - 1;
-                } else {
-                    counter--;
-                }
-                updateSlidePosition();
-            }
+            let autoSlide = setInterval(moveToNext, 5000);
 
-            nextBtn.addEventListener('click', () => {
-                clearInterval(autoSlide);
-                moveToNext();
-                autoSlide = setInterval(moveToNext, 3000);
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
             });
 
-            prevBtn.addEventListener('click', () => {
-                clearInterval(autoSlide);
-                moveToPrev();
-                autoSlide = setInterval(moveToNext, 3000);
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
             });
-
-            // Обработка ресайза
-            window.addEventListener('resize', () => {
-                slide.style.transition = 'none';
-                slide.style.transform = 'translateX(' + (-images[0].clientWidth * counter) + 'px)';
-            });
+            
+            setTimeout(updateSlidePosition, 500);
         });
     </script>
 </body>
-
 </html>

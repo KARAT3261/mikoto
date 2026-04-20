@@ -2,10 +2,56 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>��������</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Токусима - Микото</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/города.css">
 </head>
 <body>
-    <h1>��������</h1>
-    <a href="../������ � �����/�����.html">��������� � �����</a>
+    <div class="city-container">
+        <nav class="city-nav">
+            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+        </nav>
+        <div class="carousel-container">
+            <div class="carousel-slide" id="carouselSlide">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Tokushima 1">
+                <img src="https://images.unsplash.com/photo-15455127398-14699f92334b?q=80&w=2070&auto=format&fit=crop" alt="Tokushima 2">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2070&auto=format&fit=crop" alt="Tokushima 3">
+            </div>
+            <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+            <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+        </div>
+        <div class="city-info">
+            <h1 class="city-huge-title">Токусима</h1>
+            <div class="wiki-desc">
+                <p>Знаменита фестивалем танца Ава-одори и впечатляющими водоворотами Наруто.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slide = document.getElementById('carouselSlide');
+            const images = slide.querySelectorAll('img');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let counter = 0;
+            const size = () => images[0] ? images[0].clientWidth : 0;
+            let autoSlide = setInterval(moveToNext, 5000);
+            function updateSlidePosition() {
+                const s = size(); if (s === 0) return;
+                slide.style.transition = "transform 0.5s ease-in-out";
+                slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
+            }
+            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
+            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
+            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
+            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
+            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+            setTimeout(updateSlidePosition, 500);
+        });
+    </script>
 </body>
 </html>

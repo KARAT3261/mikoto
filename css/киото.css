@@ -280,9 +280,6 @@ body {
     margin-bottom: 0;
 }
 
-.wiki-desc p:last-child {
-    margin-bottom: 0;
-}
 
 /* Черная шапка с кнопками по центру */
 .kyoto-nav {
@@ -339,5 +336,121 @@ body {
     }
 }
 
+/* Стили для новых разделов (Карточки и История) */
+.section-title {
+    font-size: 3.5rem;
+    color: var(--kyoto-gold);
+    text-align: center;
+    margin: 4rem 0 2rem;
+    font-family: 'Cormorant Infant', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
 
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 1rem;
+}
+
+.story-card {
+    background: rgba(26, 26, 29, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--kyoto-gold);
+}
+
+.story-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--kyoto-red);
+}
+
+.story-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.story-content h3 {
+    font-size: 1.8rem;
+    color: var(--sakura-pink);
+    margin-bottom: 1rem;
+    font-family: 'Cormorant Infant', serif;
+}
+
+.story-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--paper-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.history-section {
+    background: rgba(177, 42, 39, 0.05);
+    padding: 4rem 2rem;
+    border-radius: 30px;
+    margin: 4rem 0;
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+    max-width: 1000px;
+}
+
+.myth-badge {
+    display: inline-block;
+    background: var(--kyoto-red);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-text {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+    font-style: italic;
+    max-width: 900px;
+    margin: 0 auto 3rem !important;
+    color: var(--kyoto-gold) !important;
+}
+
+/* Стили для ссылок-карточек и текстовых ссылок */
+.story-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.history-link {
+    text-decoration: none;
+    color: var(--kyoto-gold);
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.history-link:hover {
+    color: var(--sakura-pink);
+    border-bottom: 1px solid var(--sakura-pink);
+}
+
+.history-link strong {
+    color: inherit;
+}
 
