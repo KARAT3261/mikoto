@@ -1,0 +1,22 @@
+:root {
+    --kyoto-red: #B12A27;
+    --kyoto-gold: #D4AF37;
+    --ink-black: #1A1A1D;
+    --paper-white: #F4EEDF;
+    --sakura-pink: #F4C4CD;
+    --deep-shadow: rgba(0, 0, 0, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Infant', serif;
+    background-color: var(--ink-black);
+    color: var(--paper-white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}

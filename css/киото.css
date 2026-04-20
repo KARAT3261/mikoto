@@ -278,3 +278,65 @@ body {
 .wiki-desc p:last-child {
     margin-bottom: 0;
 }
+
+.wiki-desc p:last-child {
+    margin-bottom: 0;
+}
+
+/* Черная шапка с кнопками по центру */
+.kyoto-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 4rem;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--paper-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: var(--kyoto-gold);
+    background-color: rgba(212, 175, 55, 0.05);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Отступ контента от фиксированной шапки */
+.kyoto-container {
+    padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+    .kyoto-nav {
+        gap: 2rem;
+        padding: 0.8rem 0;
+    }
+    .nav-link {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        padding: 8px 15px;
+    }
+}
+
+
+
