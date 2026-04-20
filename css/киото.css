@@ -264,6 +264,7 @@ body {
     margin-bottom: 2rem;
     background: linear-gradient(to bottom, var(--paper-white), var(--sakura-pink));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
