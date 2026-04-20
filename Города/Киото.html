@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Киото - Древняя Столица</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/киото.css">
+</head>
+
+<body>
+    <div class="kyoto-container">
+        <nav class="kyoto-nav">
+            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+        </nav>
+
+        <!-- Картинки (Слайдер) -->
+        <div class="carousel-container">
+            <div class="carousel-slide" id="carouselSlide">
+                <!-- Используем качественные фото Киото с Unsplash -->
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop"
+                    alt="Kyoto temple">
+                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop"
+                    alt="Kyoto street">
+                <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=2070&auto=format&fit=crop"
+                    alt="Kyoto nature">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop"
+                    alt="Kyoto temple clone"> <!-- Для плавного зацикливания -->
+            </div>
+
+            <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+            <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+        </div>
+
+        <div class="kyoto-info">
+            <h1 class="kyoto-huge-title">Киото</h1>
+
+            <div class="wiki-desc">
+                <p>Кио́то (яп. 京都市 Кё:то-си) — японский город, расположенный в центральной части острова Хонсю, в центре
+                    региона Кансай. Является административным центром префектуры Киото.</p>
+                <p>Один из ведущих городов региона Кансай. Город имеет богатейшую историю: в течение более чем
+                    тысячелетия (с 794 по 1869 годы) он был столицей Японии и главной резиденцией Императоров. Старое
+                    название города — Хэйан.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slide = document.getElementById('carouselSlide');
+            const images = slide.querySelectorAll('img');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            let counter = 0;
+            const size = images[0].clientWidth;
+            const totalImages = images.length - 1; // последний - клон первого для зацикливания если нужно, но проще просто гонять
+
+            // Автоматическое переключение
+            let autoSlide = setInterval(() => {
+                moveToNext();
+            }, 3000);
+
+            function updateSlidePosition() {
+                slide.style.transition = "transform 0.5s ease-in-out";
+                slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+
+            function moveToNext() {
+                if (counter >= totalImages - 1) { // Возврат на первую
+                    counter = 0;
+                } else {
+                    counter++;
+                }
+                updateSlidePosition();
+            }
+
+            function moveToPrev() {
+                if (counter <= 0) {
+                    counter = totalImages - 1;
+                } else {
+                    counter--;
+                }
+                updateSlidePosition();
+            }
+
+            nextBtn.addEventListener('click', () => {
+                clearInterval(autoSlide);
+                moveToNext();
+                autoSlide = setInterval(moveToNext, 3000);
+            });
+
+            prevBtn.addEventListener('click', () => {
+                clearInterval(autoSlide);
+                moveToPrev();
+                autoSlide = setInterval(moveToNext, 3000);
+            });
+
+            // Обработка ресайза
+            window.addEventListener('resize', () => {
+                slide.style.transition = 'none';
+                slide.style.transform = 'translateX(' + (-images[0].clientWidth * counter) + 'px)';
+            });
+        });
+    </script>
+</body>
+
+</html>

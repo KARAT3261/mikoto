@@ -265,8 +265,7 @@ function onMouseMove(event) {
 function onClick() {
     if (hoveredMesh) {
         const cityName = hoveredMesh.userData.name;
-        // Переход на созданный HTML-файл города/региона
-        window.location.href = cityName + ".html";
+        window.location.href = "../Города/" + cityName + ".html";
     }
 }
 
