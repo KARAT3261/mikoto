@@ -6,31 +6,110 @@
     <title>Аомори - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #E63946; /* Огненный красный фестиваля Нэбута */
+            --secondary-color: #F1FAEE; /* Чистый снег севера */
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%90%D0%BE%D0%BC%D0%BE%D1%80%D0%B8" target="_blank" class="huge-title-link">Аомори</a></h1>
+            <p class="city-subtitle">Край огненных фестивалей и яблоневых садов</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=2070&auto=format&fit=crop" alt="Aomori 1">
-                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop" alt="Aomori 2">
-                <img src="https://images.unsplash.com/photo-1528164344705-4754268799af?q=80&w=2070&auto=format&fit=crop" alt="Aomori 3">
+                <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=2070&auto=format&fit=crop" alt="Фестиваль Нэбута">
+                <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef21?q=80&w=2070&auto=format&fit=crop" alt="Озеро Товада">
+                <img src="https://images.unsplash.com/photo-1576675784201-0e142b423952?q=80&w=2070&auto=format&fit=crop" alt="Замок Хиросаки">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Аомори</h1>
             <div class="wiki-desc">
-                <p>Аомори — самая северная префектура острова Хонсю. Она знаменита своими яблоками и грандиозным летним фестивалем Нэбута с огромными подсвеченными бумажными фигурами.</p>
+                <p class="intro-text">«Аомори — это земля, где зимнее безмолвие взрывается буйством огней Нэбута, согревая сердца в самом северном уголке Хонсю.»</p>
+                <p>Префектура Аомори — это ворота в северные земли. Город знаменит своими дикими пейзажами, чистейшими озерами и, конечно, самыми вкусными яблоками в Японии. Это место, где природа сохранила свою первозданную мощь, а люди — свой несгибаемый дух.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9D%D1%8D%D0%B1%D1%83%D1%82%D0%B0-%D0%BC%D0%B0%D1%83%D1%82%D1%83%D1%80%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=800" alt="Нэбута" class="story-image">
+                        <div class="story-content">
+                            <h3>Фестиваль Нэбута</h3>
+                            <p>Один из самых ярких праздников Японии. Гигантские светящиеся бумажные платформы, изображающие героев мифов и самураев, плывут по улицам под гул барабанов и крики танцоров.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%B8%D1%80%D0%BE%D1%81%D0%B0%D0%BA%D0%B8_(%D0%B7%D0%B0%D0%BC%D0%BE%D0%BA)" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1576675784201-0e142b423952?q=80&w=800" alt="Хиросаки" class="story-image">
+                        <div class="story-content">
+                            <h3>Замок Хиросаки</h3>
+                            <p>Знаменит своим парком, где весной расцветают более 2500 деревьев сакуры. Считается, что именно здесь можно увидеть самый красивый «ковер» из опадающих лепестков во рвах замка.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%B2%D0%B0%D0%B4%D0%B0_(%D0%BE%D0%B7%D0%B5%D1%80%D0%BE)" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef21?q=80&w=800" alt="Товада" class="story-image">
+                        <div class="story-content">
+                            <h3>Озеро Товада</h3>
+                            <p>Живописное кратерное озеро, окруженное густыми лесами. Осенью берега озера окрашиваются во все оттенки пламени, создавая захватывающую дух панораму.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%8D%D0%B9%D0%BA%D0%B0%D0%BD" target="_blank" class="history-link"><strong>Тоннель Сэйкан:</strong></a> Грандиозное инженерное чудо, соединившее Аомори с островом Хоккайдо под морским дном, став самым длинным подводным тоннелем в мире на момент постройки.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B7%D1%91%D0%BC%D0%BE%D0%BD" target="_blank" class="history-link"><strong>Стоянка Саннай-Маруяма:</strong></a> Древнее поселение периода Дзёмон (результат раскопок в Аомори), доказавшее, что здесь кипела жизнь более 5000 лет назад.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%81%D0%BE%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BD" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Осоредзан" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Мистика</span>
+                            <h3>Гора Осоредзан</h3>
+                            <p>Одна из трех самых священных гор Японии. Легенда гласит, что здесь находится вход в царство мертвых, а слепые медиумы "итако" могут передать слова ушедших.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9D%D1%8D%D0%B1%D1%83%D1%82%D0%B0" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Духи" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Сияющие Воины</h3>
+                            <p>Фигуры Нэбута изображают божеств и героев, призванных прогнать сонливость и злых духов, чтобы урожай был обильным, а жизнь долгой.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -38,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>

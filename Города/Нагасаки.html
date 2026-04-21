@@ -6,31 +6,110 @@
     <title>Нагасаки - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #3D5A80; /* Глубокий морской синий */
+            --secondary-color: #EE6C4D; /* Оранжевый закат в порту */
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%9D%D0%B0%D0%B3%D0%B0%D1%81%D0%B0%D0%BA%D0%B8" target="_blank" class="huge-title-link">Нагасаки</a></h1>
+            <p class="city-subtitle">Окно в мир и город на семи холмах</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop" alt="Nagasaki 1">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2070&auto=format&fit=crop" alt="Nagasaki 2">
-                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=2070&auto=format&fit=crop" alt="Nagasaki 3">
+                <img src="https://images.unsplash.com/photo-1571408801900-642199b0c291?q=80&w=2070&auto=format&fit=crop" alt="Панорама Нагасаки">
+                <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=2070&auto=format&fit=crop" alt="Гловер Гарден">
+                <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2070&auto=format&fit=crop" alt="Нагасаки ночью">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Нагасаки</h1>
             <div class="wiki-desc">
-                <p>Нагасаки — город с уникальной историей, долгое время бывший единственным окном Японии в мир.</p>
+                <p class="intro-text">«Нагасаки — это город-мозаика, где европейские соборы, китайские храмы и японские святилища сливаются в единую мелодию.»</p>
+                <p>Единственный порт, остававшийся открытым для мира во время самоизоляции Японии, Нагасаки стал колыбелью научного и культурного обмена. Это город невероятных видов, уходящих вверх по склонам гор, и глубокой исторической памяти.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B4_%D0%93%D0%BB%D0%BE%D0%B2%D0%B5%D1%80%D0%B0" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=800" alt="Сад Гловера" class="story-image">
+                        <div class="story-content">
+                            <h3>Сад Гловера</h3>
+                            <p>Старейший в Японии деревянный особняк европейского типа. Сад предлагает захватывающий вид на гавань и хранит атмосферу оперы «Мадам Баттерфляй».</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%94%D1%8D%D0%B4%D0%B7%D0%B8%D0%BC%D0%B0" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1571408801900-642199b0c291?q=80&w=800" alt="Дэдзима" class="story-image">
+                        <div class="story-content">
+                            <h3>Дэдзима</h3>
+                            <p>Искусственный остров, который на протяжении 200 лет был единственной точкой соприкосновения Японии с западным миром через голландских торговцев.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D0%B0%D1%81%D0%B0" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=800" alt="Инаса" class="story-image">
+                        <div class="story-content">
+                            <h3>Гора Инаса</h3>
+                            <p>Вид с этой вершины считается одним из трех лучших ночных видов в Японии. Мириады огней города отражаются в водах залива, создавая магическую картину.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%A5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE_%D0%B2_%D0%AF%D0%BF%D0%BE%D0%BD%D0%B8%D0%B8" target="_blank" class="history-link"><strong>Скрытые Христиане:</strong></a> Нагасаки на века стал духовным убежищем для тех, кто тайно исповедовал христианство, несмотря на жестокие запреты сегуната.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%90%D1%82%D0%BE%D0%BC%D0%BD%D0%B0%D1%8F_%D0%B1%D0%BE%D0%BC%D0%B1%D0%B0%D1%80%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%9D%D0%B0%D0%B3%D0%B0%D1%81%D0%B0%D0%BA%D0%B8" target="_blank" class="history-link"><strong>Вторая трагедия (1945):</strong></a> Нагасаки стал вторым в мире городом, подвергшимся атомной бомбардировке, но смог восстать из пепла, став символом надежды и мира.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BC%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Сува" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Божество</span>
+                            <h3>Сува Оками</h3>
+                            <p>Божество святилища Сува-дзингу, покровитель города. Грандиозный фестиваль Нагасаки Кунти — это подношение богам в виде ярких танцев и процессий.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9_%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%81%D0%BA_%D0%9A%D1%81%D0%B0%D0%B2%D0%B5%D1%80%D0%B8%D0%B9" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Ксаверий" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Дух Странствий</h3>
+                            <p>Легенды о первых миссионерах и торговцах, привезших в Японию новые знания и веру. Нагасаки хранит эти истории как часть своего уникального ДНК.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -38,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>

@@ -6,31 +6,110 @@
     <title>Канагава - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #1D3557; /* Темно-синий, цвет Великого сегуната */
+            --secondary-color: #A8DADC; /* Цвет морской пены и Камакуры */
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%9A%D0%B0%D0%BD%D0%B0%D0%B3%D0%B0%D0%B2%D0%B0" target="_blank" class="huge-title-link">Канагава</a></h1>
+            <p class="city-subtitle">Тень священной Фудзи и колыбель самурайского духа</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1526481280693-3bfa756180f1?q=80&w=2070&auto=format&fit=crop" alt="Kanagawa 1">
-                <img src="https://images.unsplash.com/photo-1540959733332-e9ab42bf0ad1?q=80&w=2070&auto=format&fit=crop" alt="Kanagawa 2">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2070&auto=format&fit=crop" alt="Kanagawa 3">
+                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop" alt="Большой Будда">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Минато Мирай">
+                <img src="https://images.unsplash.com/photo-1590244799061-80bb6e29729d?q=80&w=2070&auto=format&fit=crop" alt="Хаконэ">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Канагава</h1>
             <div class="wiki-desc">
-                <p>Префектура Канагава включает в себя современную Иокогаму, историческую Камакуру с Большим Буддой и живописные виды на Фудзи из Хаконе.</p>
+                <p class="intro-text">«Канагава — это место, где мощь Тихого океана встречается с тишиной древних храмов Камакуры под неусыпным взором горы Фудзи.»</p>
+                <p>Префектура Канагава — это уникальный сплав истории и современности. От первой самурайской столицы Японии в Камакуре до ультрасовременных небоскребов Иокогамы, эта земля всегда была центром великих свершений и глубокой эстетики.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%82%D0%BE%D0%BA%D1%83-%D0%B8%D0%BD" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800" alt="Большой Будда" class="story-image">
+                        <div class="story-content">
+                            <h3>Большой Будда (Дайбуцу)</h3>
+                            <p>Колоссальная бронзовая статуя Будды Амиды в Камакуре. Более 700 лет она стоит под открытым небом, пережив цунами и бури, как символ непоколебимого спокойствия.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D0%BA%D0%BE%D0%BD%D1%8D" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1590244799061-80bb6e29729d?q=80&w=800" alt="Хаконэ" class="story-image">
+                        <div class="story-content">
+                            <h3>Хаконэ</h3>
+                            <p>Живописный регион горячих источников и горных озер. Это лучшее место, чтобы увидеть величественную гору Фудзи и насладиться традиционным отдыхом в реканах.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BD%D0%B0%D1%82%D0%BE_%D0%9C%D0%B8%D1%80%D0%B0%D0%B9_21" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Минато Мирай" class="story-image">
+                        <div class="story-content">
+                            <h3>Минато Мирай</h3>
+                            <p>«Порт будущего» в Иокогаме. Сверкающие небоскребы, гигантское колесо обозрения и морской бриз делают этот район иконой современного японского урбанизма.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B8%D0%BE%D0%B4_%D0%9A%D0%B0%D0%BC%D0%B0%D0%BA%D1%83%D1%80%D0%B0" target="_blank" class="history-link"><strong>Эпоха Камакура (1185–1333):</strong></a> Время первого сегуната, когда власть перешла от аристократов к воинам-самураям. Именно здесь зародился кодекс Бусидо.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F_%D0%B2%D0%BE%D0%BB%D0%BD%D0%B0_%D0%B2_%D0%9A%D0%B0%D0%BD%D0%B0%D0%B3%D0%B0%D0%B2%D0%B5" target="_blank" class="history-link"><strong>Большая волна:</strong></a> Знаменитая гравюра Хокусая прославила имя Канагавы на весь мир, став символом мощи природы и японского искусства укиё-э.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D1%82%D0%B8%D0%BC%D0%B0%D0%BD" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Хатиман" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Божество</span>
+                            <h3>Хатиман-но-Ками</h3>
+                            <p>Бог войны и покровитель самураев. Главное святилище Цуругаока Хатимангу в Камакуре было духовным центром первого военного правительства Японии.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%91%D1%8D%D0%BD%D0%B4%D0%B7%D0%B0%D0%B9%D1%82%D1%8D%D0%BD" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Бэндзайтен" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Бэндзайтэн</h3>
+                            <p>Богиня музыки, искусств и удачи. Легенды острова Эносима гласят, что богиня подняла этот остров со дна морского, чтобы усмирить свирепого дракона.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -38,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>

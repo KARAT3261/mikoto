@@ -6,31 +6,110 @@
     <title>Кагава - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #00B4D8;
+            --secondary-color: #CAF0F8;
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%9A%D0%B0%D0%B3%D0%B0%D0%B2%D0%B0" target="_blank" class="huge-title-link">Кагава</a></h1>
+            <p class="city-subtitle">Царство лапши Удон и искусство островов Сэто</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1516483642780-6c66bca02923?q=80&w=2070&auto=format&fit=crop" alt="Kagawa 1">
-                <img src="https://images.unsplash.com/photo-1540959733332-e9ab42bf0ad1?q=80&w=2070&auto=format&fit=crop" alt="Kagawa 2">
-                <img src="https://images.unsplash.com/photo-1554123168-b3d1f046424e?q=80&w=2070&auto=format&fit=crop" alt="Kagawa 3">
+                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop" alt="Кагава 1">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Кагава 2">
+                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop" alt="Кагава 3">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Кагава</h1>
             <div class="wiki-desc">
-                <p>Самая маленькая префектура Японии, называемая королевством удона. Здесь находится прекрасный парк Рицурин и святилище Компира-сан.</p>
+                <p class="intro-text">"«Кагава — это вкус идеального удона и созерцание моря в парке Рицурин, где каждый камень помнит историю великих правителей.»"</p>
+                <p>Самая маленькая по площади префектура Японии, ставшая гигантом в мире культуры и гастрономии. Здесь острова превращены в музеи под открытым небом.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D0%BA_%D0%A0%D0%B8%D1%86%D1%83%D1%80%D0%B8%D0%BD" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800" alt="Парк Рицурин" class="story-image">
+                        <div class="story-content">
+                            <h3>Парк Рицурин</h3>
+                            <p>Один из самых красивых прогулочных садов страны, шедевр эпохи Эдо с шестью прудами и тринадцатью холмами.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%82%D0%BE%D1%85%D0%B8%D1%80%D0%B0-%D0%B3%D1%83" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Котохира-гу" class="story-image">
+                        <div class="story-content">
+                            <h3>Котохира-гу</h3>
+                            <p>Святилище Компира-сан, к которому ведут 1368 ступеней. Покровитель моряков и путешественников.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9D%D0%B0%D0%BE%D1%81%D0%B8%D0%BC%D0%B0" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=800" alt="Остров Наосима" class="story-image">
+                        <div class="story-content">
+                            <h3>Остров Наосима</h3>
+                            <p>Мировой центр современного искусства с футуристическими музеями Тадао Андо и 'Тыквой' Яёи Кусамы.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BD%D1%83%D0%BA%D0%B8_%D0%A3%D0%B4%D0%BE%D0%BD" target="_blank" class="history-link"><strong>Сануки Удон:</strong></a> Кулинарный символ региона. Кагава потребляет больше лапши на душу населения, чем любая другая префектура.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BC%D0%BE%D0%BA_%D0%9C%D0%B0%D1%80%D1%83%D0%B3%D0%B0%D0%BC%D1%8D" target="_blank" class="history-link"><strong>Замок Маругамэ:</strong></a> Обладает самыми высокими каменными стенами в Японии, выдержавшими испытания временем.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%B3_%D0%9A%D0%BE%D0%BD%D0%BF%D0%B8%D1%80%D0%B0" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Бог Компира" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Мифология</span>
+                            <h3>Бог Компира</h3>
+                            <p>Древнее морское божество, пришедшее из Индии и ставшее защитником всех, кто вверяет свою жизнь волнам.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%94%D1%83%D1%85%D0%B8_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%B2_%D0%A1%D1%82%D0%BE" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Духи островов" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Духи островов</h3>
+                            <p>Мистические истории о том, как камни островов Кагавы превращаются в произведения искусства под взглядом творцов.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -38,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>

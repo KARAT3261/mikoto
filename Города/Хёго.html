@@ -6,31 +6,110 @@
     <title>Хёго - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #F8F9FA;
+            --secondary-color: #0077B6;
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%A5%D1%91%D0%B3%D0%BE" target="_blank" class="huge-title-link">Хёго</a></h1>
+            <p class="city-subtitle">Белая цапля Химэдзи и космополитичный блеск Кобе</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2070&auto=format&fit=crop" alt="Hyogo 1">
-                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop" alt="Hyogo 2">
-                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=2070&auto=format&fit=crop" alt="Hyogo 3">
+                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop" alt="Хёго 1">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Хёго 2">
+                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop" alt="Хёго 3">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Хёго</h1>
             <div class="wiki-desc">
-                <p>В Хёго находится замок Белой Цапли — самый красивый и сохранный замок Японии.</p>
+                <p class="intro-text">"«Хёго — это вечность в стенах Химэдзи, застывшая как белая цапля в полете, и огни порта Кобе, устремленные в будущее.»"</p>
+                <p>Префектура, охватывающая всю Японию с севера на юг. Здесь древние оборонительные секреты самураев соседствуют с лучшей в мире говядиной и европейским стилем жизни портового города.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BC%D0%BE%D0%BA_%D0%A5%D0%B8%D0%BC%D1%8D%D0%B4%D0%B7%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800" alt="Замок Химэдзи" class="story-image">
+                        <div class="story-content">
+                            <h3>Замок Химэдзи</h3>
+                            <p>«Замок белой цапли», величайший шедевр японской замковой архитектуры и объект Всемирного наследия ЮНЕСКО.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%80%D1%82_%D0%9A%D0%BE%D0%B1%D0%B5" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Порт Кобе" class="story-image">
+                        <div class="story-content">
+                            <h3>Порт Кобе</h3>
+                            <p>Один из самых современных и красивых портов Японии, знаменитый своей башней-маяком и ночными видами с горы Рокко.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%90%D1%80%D0%B8%D0%BC%D0%B0-%D0%BE%D0%BD%D1%81%D1%8D%D0%BD" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=800" alt="Арима-онсэн" class="story-image">
+                        <div class="story-content">
+                            <h3>Арима-онсэн</h3>
+                            <p>Один из трех древнейших курортов Японии, чьи 'золотые' и 'серебряные' воды ценились императорами Японии.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D0%B2%D1%8F%D0%B4%D0%B8%D0%BD%D0%B0_%D0%9A%D0%BE%D0%B1%D0%B5" target="_blank" class="history-link"><strong>Говядина Кобе:</strong></a> Мировой эталон качества, рожденный в горах Хёго благодаря уникальным традициям животноводства.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B0%D0%BD_%D0%90%D0%BA%D0%B0%D0%BC%D0%B0%D1%86%D1%83" target="_blank" class="history-link"><strong>Клан Акамацу:</strong></a> Могущественная самурайская династия, заложившая основы оборонной мощи региона в эпоху Сэнгоку.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%B3%D0%B8_%D0%B3%D0%BE%D1%80%D1%8B_%D0%A0%D0%BE%D0%BA%D0%BA%D0%BE" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Боги горы Рокко" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Мифология</span>
+                            <h3>Боги горы Рокко</h3>
+                            <p>Поверья о древних духах гор, которые защищают город от зимних ветров и даруют целебную силу источникам Аримы.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%94%D1%83%D1%85_%D0%91%D0%B5%D0%BB%D0%BE%D0%B9_%D0%A6%D0%B0%D0%BF%D0%BB%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Дух Белой Цапли" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Дух Белой Цапли</h3>
+                            <p>Легенда о священной птице, чей облик принял замок Химэдзи, чтобы стать непобедимым для врагов и вечным для времени.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -38,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>

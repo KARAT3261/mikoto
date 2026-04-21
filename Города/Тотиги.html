@@ -6,31 +6,110 @@
     <title>Тотиги - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #D4AF37;
+            --secondary-color: #B12A27;
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%A2%D0%BE%D1%82%D0%B8%D0%B3%D0%B8" target="_blank" class="huge-title-link">Тотиги</a></h1>
+            <p class="city-subtitle">Блеск золота Никко и целебные воды гор</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1516483642780-6c66bca02923?q=80&w=2070&auto=format&fit=crop" alt="Tochigi 1">
-                <img src="https://images.unsplash.com/photo-15420518418c7-4737b7929239?q=80&w=2070&auto=format&fit=crop" alt="Tochigi 2">
-                <img src="https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?q=80&w=2070&auto=format&fit=crop" alt="Tochigi 3">
+                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop" alt="Тотиги 1">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Тотиги 2">
+                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop" alt="Тотиги 3">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Тотиги</h1>
             <div class="wiki-desc">
-                <p>Главная достопримечательность — Никко. Роскошные святилища и храмы, окруженные древними кедрами.</p>
+                <p class="intro-text">"«Тотиги — это величие сегунов в Никко и шепот водопадов Кэгон, раздающийся в тишине священных кедров.»"</p>
+                <p>Префектура, где воля человека создала шедевры архитектуры посреди девственной природы. Никко — это место, без которого нельзя познать красоту Японии.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BA%D0%BE_%D0%A2%D0%BE%D1%81%D1%91-%D0%B3%D1%83" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800" alt="Никко Тосё-гу" class="story-image">
+                        <div class="story-content">
+                            <h3>Никко Тосё-гу</h3>
+                            <p>Мавзолей Иэясу Токугавы, поражающий невероятной резьбой и золотым убранством.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D0%BE%D0%BF%D0%B0%D0%B4_%D0%9A%D1%8D%D0%B3%D0%BE%D0%BD" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Водопад Кэгон" class="story-image">
+                        <div class="story-content">
+                            <h3>Водопад Кэгон</h3>
+                            <p>Один из самых мощных водопадов страны, низвергающийся из горного озера Тюдзэндзи.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D0%BA_%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2_%D0%90%D1%81%D0%B8%D0%BA%D0%B0%D0%B3%D0%B0" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=800" alt="Парк цветов Асикага" class="story-image">
+                        <div class="story-content">
+                            <h3>Парк цветов Асикага</h3>
+                            <p>Место, где можно увидеть столетние глицинии, образующие фантастические сиреневые туннели.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B3%D1%83%D0%BD%D0%B0%D1%82_%D0%A2%D0%BE%D0%BA%D1%83%D0%B3%D0%B0%D0%B2%D0%B0" target="_blank" class="history-link"><strong>Сегунат Токугава:</strong></a> Никко стал духовным центром великих правителей Японии, символизируя стабильность и мощь их власти.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D0%BD%D1%87%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%BE_%D0%9C%D0%B0%D1%81%D0%B8%D0%BA%D0%BE" target="_blank" class="history-link"><strong>Гончарство Масико:</strong></a> Уникальное направление народных ремесел, возродившее эстетику простоты и функциональности.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D0%B8_%D0%BC%D1%83%D0%B4%D1%80%D1%8B%D0%B5_%D0%BE%D0%B1%D0%B5%D0%B7%D1%8C%D1%8F%D0%BD%D1%8B" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Три мудрые обезьяны" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Мифология</span>
+                            <h3>Три мудрые обезьяны</h3>
+                            <p>Знаменитый символ 'не вижу, не слышу, не говорю', украшающий храмы Никко и обучающий жизненной мудрости.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D1%8B%D0%B9_%D0%B7%D0%BC%D0%B5%D0%B9" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Белый змей" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Белый змей</h3>
+                            <p>Хранитель сокровищ Никко, приносящий богатство и защиту тем, кто почитает его святыни.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -38,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>

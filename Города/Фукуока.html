@@ -6,31 +6,110 @@
     <title>Фукуока - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #F8AD9D; /* Теплый коралловый */
+            --secondary-color: #FBC4AB; /* Персиковый - дух Хакаты */
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%A4%D1%83%D0%BA%D1%83%D0%BE%D0%BA%D0%B0" target="_blank" class="huge-title-link">Фукуока</a></h1>
+            <p class="city-subtitle">Ворота в Азию и гастрономическая столица Кюсю</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1528164344705-4754268799af?q=80&w=2070&auto=format&fit=crop" alt="Fukuoka 1">
-                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop" alt="Fukuoka 2">
-                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=2070&auto=format&fit=crop" alt="Fukuoka 3">
+                <img src="https://images.unsplash.com/photo-1590244799061-80bb6e29729d?q=80&w=2070&auto=format&fit=crop" alt="Фукуока вечером">
+                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop" alt="Дадзайфу">
+                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop" alt="Канал Сити">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Фукуока</h1>
             <div class="wiki-desc">
-                <p>Главный город острова Кюсю, известный своим раменом Хаката и ночными палатками ятаи.</p>
+                <p class="intro-text">«Фукуока — это город, где древние святилища соседствуют с самыми уютными уличными киосками "ятай", создавая уникальную атмосферу Кюсю.»</p>
+                <p>Крупнейший город на острове Кюсю, Фукуока славится своим динамичным духом и невероятной едой. Это город, который смог объединить торговую энергию порта Хаката и благородство замкового города Фукуока в единый, гармоничный мегаполис.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D0%B4%D0%B7%D0%B0%D0%B9%D1%84%D1%83_%D0%A2%D1%8D%D0%BD%D0%BC%D0%B0%D0%BD%D0%B3%D1%83" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800" alt="Дадзайфу" class="story-image">
+                        <div class="story-content">
+                            <h3>Дадзайфу Тэнмангу</h3>
+                            <p>Огромное святилище, посвященное богу учения. Тысячи сливовых деревьев цветут здесь ранней весной, создавая волшебный аромат и вид.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%AF%D1%82%D0%B0%D0%B9" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1590244799061-80bb6e29729d?q=80&w=800" alt="Ятай" class="story-image">
+                        <div class="story-content">
+                            <h3>Ларьки Ятай</h3>
+                            <p>Уличные киоски, которые открываются с наступлением сумерек на берегах рек. Гул голосов и аромат Хаката-рамэна делают это место сердцем ночной жизни города.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D0%BA_%D0%9E%D1%85%D0%BE%D1%80%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=800" alt="Охори" class="story-image">
+                        <div class="story-content">
+                            <h3>Парк Охори</h3>
+                            <p>Красивейший парк с большим озером в центре, которое когда-то служило рвом для замка Фукуока. Место для прогулок, медитаций и созерцания природы.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B5_%D0%B2%D1%82%D0%BE%D1%80%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2_%D0%AF%D0%BF%D0%BE%D0%BD%D0%B8%D1%8E" target="_blank" class="history-link"><strong>Камикадзе (1281):</strong></a> Именно у берегов Фукуоки монгольский флот был дважды остановлен легендарным «Божественным ветром» — тайфуном, спасшим Японию.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D0%BA%D0%B0%D1%82%D0%B0" target="_blank" class="history-link"><strong>Порт Хаката:</strong></a> Один из старейших торговых портов Японии, служивший мостом для обмена знаниями и товарами с азиатским континентом на протяжении веков.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D0%B3%D0%B0%D0%B2%D0%B0%D1%80%D0%B0-%D0%BD%D0%BE_%D0%9C%D0%B8%D1%82%D0%B8%D0%B4%D0%B7%D0%B0%D0%BD%D1%8D" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Тэндзин" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Божество</span>
+                            <h3>Тэндзин (Сугавара-но Митидзанэ)</h3>
+                            <p>Бог учения и каллиграфии. Студенты со всей страны приезжают в Дадзайфу, чтобы попросить его об успехе на экзаменах.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D1%81%D0%B8%D0%B4%D0%B0-%D0%B4%D0%B7%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Кусида" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Святилище Кусида</h3>
+                            <p>Здесь обитает божество, охраняющее город. Ежегодный фестиваль Хаката Гион Ямакаса — это бурное и яркое подношение защитникам Фукуоки.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -38,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>

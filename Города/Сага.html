@@ -6,31 +6,110 @@
     <title>Сага - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #2A9D8F;
+            --secondary-color: #E9C46A;
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%A1%D0%B0%D0%B3%D0%B0" target="_blank" class="huge-title-link">Сага</a></h1>
+            <p class="city-subtitle">Изящество фарфора и тайны древнего государства Яматай</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=2070&auto=format&fit=crop" alt="Saga 1">
-                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop" alt="Saga 2">
-                <img src="https://images.unsplash.com/photo-1526481280693-3bfa756180f1?q=80&w=2070&auto=format&fit=crop" alt="Saga 3">
+                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop" alt="Сага 1">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Сага 2">
+                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop" alt="Сага 3">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Сага</h1>
             <div class="wiki-desc">
-                <p>Префектура Сага знаменита своим фарфором Арита и Имари, который высоко ценился во всем мире.</p>
+                <p class="intro-text">"«Сага — это прозрачность фарфора Арита и красные ворота святилища Ютоку Инари, сияющие на фоне зеленых холмов Кюсю.»"</p>
+                <p>Префектура, ставшая мостом между культурами Азии и Японии. Край мастеров керамики и удивительных археологических открытий.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D1%80%D1%84%D0%BE%D1%80_%D0%90%D1%80%D0%B8%D1%82%D0%B0" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800" alt="Фарфор Арита" class="story-image">
+                        <div class="story-content">
+                            <h3>Фарфор Арита</h3>
+                            <p>Первое место в Японии, где начали производить фарфор. Изделия Арита до сих пор считаются эталоном изящества во всем мире.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%AE%D1%82%D0%BE%D0%BA%D1%83_%D0%98%D0%BD%D0%B0%D1%80%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Ютоку Инари" class="story-image">
+                        <div class="story-content">
+                            <h3>Ютоку Инари</h3>
+                            <p>Один из трех главных храмов Инари в стране, поражающий своей архитектурой на высоких сваях.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%99%D0%BE%D1%81%D0%B8%D0%BD%D0%BE%D0%B3%D0%B0%D1%80%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=800" alt="Йосиногари" class="story-image">
+                        <div class="story-content">
+                            <h3>Йосиногари</h3>
+                            <p>Уникальный археологический парк-реконструкция поселения периода Яёи, раскрывающий истоки японской цивилизации.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B0%D0%BD_%D0%9D%D0%B0%D0%B1%D1%8D%D1%81%D0%B8%D0%BC%D0%B0" target="_blank" class="history-link"><strong>Клан Набэсима:</strong></a> Прогрессивные правители Саги, которые первыми в Японии начали отливать пушки по европейским чертежам.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B5%D1%80%D0%B0%D0%BC%D0%B8%D0%BA%D0%B0_%D0%98%D0%BC%D0%B0%D1%80%D0%B8" target="_blank" class="history-link"><strong>Керамика Имари:</strong></a> Знаменитый стиль фарфора, который массово экспортировался в Европу, украшая королевские дворцы.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%B3%D0%B8%D0%BD%D1%8F_%D0%A5%D0%B8%D0%BC%D0%B8%D0%BA%D0%BE" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Богиня Химико" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Мифология</span>
+                            <h3>Богиня Химико</h3>
+                            <p>Мифическая правительница-шаманка государства Яматай, чьи следы историки ищут в курганах префектуры Сага.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%94%D1%83%D1%85%D0%B8_%D0%BA%D0%B0%D0%BC%D0%BD%D1%8F_%D0%BF%D0%BE%D0%BB%D1%8F_%D0%98%D0%B7%D1%83%D0%BC%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Духи камня" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Духи камня</h3>
+                            <p>Поверья мастеров Ариты о том, что в белой глине гор живут духи, направляющие руку гончара к совершенству.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -38,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>

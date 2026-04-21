@@ -6,32 +6,110 @@
     <title>Токио - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #3A86FF; /* Электрический синий для Токио */
+            --secondary-color: #8338EC; /* Фиолетовый градиент будущего */
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%A2%D0%BE%D0%BA%D0%B8%D0%BE" target="_blank" class="huge-title-link">Токио</a></h1>
+            <p class="city-subtitle">Неоновый мегаполис с сердцем самурая</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=2070&auto=format&fit=crop" alt="Tokyo 1">
-                <img src="https://images.unsplash.com/photo-1540959733332-e9ab42bf0ad1?q=80&w=2070&auto=format&fit=crop" alt="Tokyo 2">
-                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Tokyo 3">
+                <img src="https://images.unsplash.com/photo-1540959733332-e9ab65838d70?q=80&w=2070&auto=format&fit=crop" alt="Вечерний Токио">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Перекресток Сибуя">
+                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop" alt="Токио ночью">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Токио</h1>
             <div class="wiki-desc">
-                <p>Токио — самая большая и динамичная столица мира. Город, где будущее уже наступило в неоновых огнях Акихабары, но прошлое всё еще живо в тишине храма Сэнсо-дзи.</p>
-                <p>Здесь ритм мегаполиса сочетается с японской деликатностью, а каждый район открывает свою уникальную грань реальности.</p>
+                <p class="intro-text">«Токио — это место, где границы между будущим и прошлым стираются под светом неоновых огней и вековых святилищ.»</p>
+                <p>Самый большой мегаполис мира поражает своим масштабом и гармонией. Здесь ультрасовременные небоскребы соседствуют с тихими парками, а высокоскоростные поезда проносятся мимо древних ворот торий.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%8D%D0%BD%D1%81%D0%BE-%D0%B4%D0%B7%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=800" alt="Сэнсо-дзи" class="story-image">
+                        <div class="story-content">
+                            <h3>Сэнсо-дзи</h3>
+                            <p>Старейший буддийский храм Токио в районе Асакуса. Знаменитые ворота Каминаримон с гигантским красным фонарем приветствуют миллионы паломников каждый год.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%B1%D1%83%D1%8F_(%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D1%80%D1%91%D1%81%D1%82%D0%BE%D0%BA)" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1540959733332-e9ab65838d70?q=80&w=800" alt="Сибуя" class="story-image">
+                        <div class="story-content">
+                            <h3>Перекресток Сибуя</h3>
+                            <p>Символ бешеного ритма Токио. Самый загруженный перекресток в мире, где тысячи людей одновременно пересекают дорогу в разных направлениях.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%80%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5%D1%86_%D0%A2%D0%BE%D0%BA%D0%B8%D0%BE" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1623946261557-463d1bf9db86?q=80&w=800" alt="Императорский дворец" class="story-image">
+                        <div class="story-content">
+                            <h3>Императорский дворец</h3>
+                            <p>Резиденция Императора, построенная на месте древнего замка Эдо. Окруженный массивными рвами и стенами, он остается духовным центром нации.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B8%D0%BE%D0%B4_%D0%AD%D0%B4%D0%BE" target="_blank" class="history-link"><strong>Эпоха Эдо (1603–1868):</strong></a> Когда город еще назывался Эдо, он стал резиденцией сегунов Токугава и быстро превратился в крупнейший город мира.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D1%81%D1%82%D0%B0%D0%B2%D1%80%D0%B0%D1%86%D0%B8%D1%8F_%D0%9C%D1%8D%D0%B9%D0%B4%D0%B7%D0%B8" target="_blank" class="history-link"><strong>Великое Превращение:</strong></a> В 1868 году город получил имя Токио (Восточная столица), начав стремительный путь к модернизации.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BC%D0%B0%D1%82%D1%8D%D1%80%D0%B0%D1%81%D1%83" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Аматэрасу" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Божество</span>
+                            <h3>Аматэрасу Омиками</h3>
+                            <p>Богиня Солнца, прародительница Императорского рода. Ей посвящены величайшие святыни, а дух её света незримо охраняет столицу.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9C%D1%8D%D0%B9%D0%B4%D0%B7%D0%B8_(%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80)" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Мэйдзи" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Император Мэйдзи</h3>
+                            <p>Фигура, ставшая полубожественной для японцев. Огромное святилище Мэйдзи Дзингу в центре Токио — это символ преклонения перед человеком, открывшим Японию миру.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -39,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>

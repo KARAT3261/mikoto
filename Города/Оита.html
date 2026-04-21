@@ -6,31 +6,110 @@
     <title>Оита - Микото</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/города.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium_city.css">
+    <style>
+        :root {
+            --accent-color: #264653;
+            --secondary-color: #2A9D8F;
+        }
+    </style>
 </head>
 <body>
+    <nav class="city-nav">
+        <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
+        <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
+    </nav>
+
     <div class="city-container">
-        <nav class="city-nav">
-            <a href="../начало и карта/карта.html" class="nav-link">Карта</a>
-            <a href="../Мифология/Мифология.html" class="nav-link">Мифология</a>
-        </nav>
+        <header class="city-header">
+            <h1 class="city-huge-title"><a href="https://www.google.com/search?q=%D0%9E%D0%B8%D1%82%D0%B0" target="_blank" class="huge-title-link">Оита</a></h1>
+            <p class="city-subtitle">Адские онсэны Бэппу и каменные Будды Усуки</p>
+        </header>
+
         <div class="carousel-container">
             <div class="carousel-slide" id="carouselSlide">
-                <img src="https://images.unsplash.com/photo-1475116127127-da3347c1c68a?q=80&w=2070&auto=format&fit=crop" alt="Oita 1">
-                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop" alt="Oita 2">
-                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=2070&auto=format&fit=crop" alt="Oita 3">
+                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop" alt="Оита 1">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Оита 2">
+                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop" alt="Оита 3">
             </div>
             <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
             <button class="carousel-btn next" id="nextBtn">&#10095;</button>
         </div>
+
         <div class="city-info">
-            <h1 class="city-huge-title">Оита</h1>
             <div class="wiki-desc">
-                <p>Столица онсэнов — Бэппу и Юфуин предлагают невероятное разнообразие горячих источников: от кровавых прудов до грязевых ванн.</p>
+                <p class="intro-text">"«Оита — это пар над «Адами» Бэппу и тихая вечность, застывшая в каменных лицах Будд в лесах Усуки.»"</p>
+                <p>Центр термальной жизни Японии. Оита — это префектура, где энергия земли вырывается наружу в виде сотен горячих источников, а древняя история высечена прямо в скалах.</p>
+            </div>
+
+            <h2 class="section-title">Вечные Символы</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%91%D1%8D%D0%BF%D0%BF%D1%83_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800" alt="Бэппу Онсэн" class="story-image">
+                        <div class="story-content">
+                            <h3>Бэппу Онсэн</h3>
+                            <p>Мировая столица горячих источников. Знаменита «семью адами» — уникальными по цвету и температуре кипящими озерами.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%9A%0%B0%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_%D0%91%D1%83%D0%B4%D0%B4%D1%8B_%D0%A3%D1%81%D1%83%D0%BA%D0%B8" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Каменные Будды Усуки" class="story-image">
+                        <div class="story-content">
+                            <h3>Каменные Будды Усуки</h3>
+                            <p>Более 60 фигур Будд, высеченных в скалах около 1000 лет назад, поражающих своим спокойствием и мастерством исполнения.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%AE%D1%84%D1%83%D0%B8%D0%BD" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=800" alt="Юфуин" class="story-image">
+                        <div class="story-content">
+                            <h3>Юфуин</h3>
+                            <p>Живописный городок у подножия горы Юфу-даке, славящийся своими арт-галереями и уютными традиционными гостиницами.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="history-section">
+                <h2 class="section-title" style="margin-top: 0;">Страницы Истории</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="wiki-desc" style="flex: 1; min-width: 300px;">
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D0%BE%D0%BC%D0%BE_%D0%A1%D0%BE%D1%80%D0%B8%D0%BD" target="_blank" class="history-link"><strong>Отомо Сорин:</strong></a> Христианский даймё, превративший Оиту в один из первых центров европейского влияния и торговли в XVI веке.</p>
+                        <p><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D1%8F%D1%82%D0%B8%D0%BB%D1%89%D0%B5_%D0%A3%D1%81%D0%B0" target="_blank" class="history-link"><strong>Святилище Уса:</strong></a> Главный храм бога войны Хатимана, откуда почитание этого божества распространилось по всей Японии.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Мифы и Боги</h2>
+            <div class="content-grid">
+                <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%B3_%D0%A5%D0%B0%D1%82%D0%B8%D0%BC%D0%B0%D0%BD" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/susanoo.png" alt="Бог Хатиман" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Мифология</span>
+                            <h3>Бог Хатиман</h3>
+                            <p>Божественный защитник Японии, объединяющий в себе черты воина и мудреца, чья родина находится в землях Уса.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BC%D0%BE%D0%BD%D1%8B_%D0%91%D1%83%D0%BD%D0%B3%D0%BE" target="_blank" class="story-card-link">
+                    <div class="story-card">
+                        <img src="../img/inari.png" alt="Демоны Бунго" class="story-image" style="height: 350px;">
+                        <div class="story-content">
+                            <span class="myth-badge">Символ</span>
+                            <h3>Демоны Бунго</h3>
+                            <p>Легенды об Они (демонах), которые в древности обитали в горячих парах Бэппу, охраняя подземные сокровища.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const slide = document.getElementById('carouselSlide');
@@ -38,18 +117,41 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             let counter = 0;
-            const size = () => images[0] ? images[0].clientWidth : 0;
-            let autoSlide = setInterval(moveToNext, 5000);
+            
             function updateSlidePosition() {
-                const s = size(); if (s === 0) return;
+                if (!images[0]) return;
+                const s = images[0].clientWidth;
                 slide.style.transition = "transform 0.5s ease-in-out";
                 slide.style.transform = 'translateX(' + (-s * counter) + 'px)';
             }
-            function moveToNext() { counter = (counter >= images.length - 1) ? 0 : counter + 1; updateSlidePosition(); }
-            function moveToPrev() { counter = (counter <= 0) ? images.length - 1 : counter - 1; updateSlidePosition(); }
-            nextBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToNext(); autoSlide = setInterval(moveToNext, 5000); });
-            prevBtn.addEventListener('click', () => { clearInterval(autoSlide); moveToPrev(); autoSlide = setInterval(moveToNext, 5000); });
-            window.addEventListener('resize', () => { slide.style.transition = 'none'; updateSlidePosition(); });
+
+            function moveToNext() { 
+                counter = (counter >= images.length - 1) ? 0 : counter + 1; 
+                updateSlidePosition(); 
+            }
+            function moveToPrev() { 
+                counter = (counter <= 0) ? images.length - 1 : counter - 1; 
+                updateSlidePosition(); 
+            }
+
+            let autoSlide = setInterval(moveToNext, 5000);
+
+            nextBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToNext(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+            prevBtn.addEventListener('click', () => { 
+                clearInterval(autoSlide); 
+                moveToPrev(); 
+                autoSlide = setInterval(moveToNext, 5000); 
+            });
+
+            window.addEventListener('resize', () => { 
+                slide.style.transition = 'none'; 
+                updateSlidePosition(); 
+            });
+            
             setTimeout(updateSlidePosition, 500);
         });
     </script>
