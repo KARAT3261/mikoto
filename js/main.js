@@ -117,29 +117,31 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.body.insertAdjacentHTML('beforeend', drawerHTML);
 
-    // Update Profile Link with Avatar (For all pages)
-    const profileLinks = document.querySelectorAll('nav a[href="profile.html"], nav a[href="auth.html"]');
-    
-    let displayUser = window.MIKOTO_STATE.user.username ? window.MIKOTO_STATE.user : null;
-    
-    // If not logged in, try to get last user
-    if(!displayUser) {
-        try {
-            const lastUserStr = localStorage.getItem('mikoto_last_user');
-            if(lastUserStr) {
-                displayUser = JSON.parse(lastUserStr);
-            }
-        } catch(e) {}
-    }
+    window.updateHeaderAvatar = function() {
+        const profileLinks = document.querySelectorAll('nav a[href="profile.html"], nav a[href="auth.html"]');
+        
+        let displayUser = window.MIKOTO_STATE.user.username ? window.MIKOTO_STATE.user : null;
+        
+        // If not logged in, try to get last user
+        if(!displayUser) {
+            try {
+                const lastUserStr = localStorage.getItem('mikoto_last_user');
+                if(lastUserStr) {
+                    displayUser = JSON.parse(lastUserStr);
+                }
+            } catch(e) {}
+        }
 
-    if(displayUser && displayUser.username) {
-        profileLinks.forEach(link => {
-            const avatarUrl = displayUser.avatar || `https://ui-avatars.com/api/?name=${displayUser.username}&background=d32f2f&color=fff`;
-            // Only redirect to profile if actually logged in
-            if (window.MIKOTO_STATE.user.username) link.href = 'profile.html';
-            link.innerHTML = `<img src="${avatarUrl}" style="width:28px; height:28px; border-radius:50%; object-fit:cover; border:2px solid var(--primary); vertical-align:middle; margin-right:8px;"> ${displayUser.username}`;
-        });
-    }
+        if(displayUser && displayUser.username) {
+            profileLinks.forEach(link => {
+                const avatarUrl = displayUser.avatar || `https://ui-avatars.com/api/?name=${displayUser.username}&background=d32f2f&color=fff`;
+                if (window.MIKOTO_STATE.user.username) link.href = 'profile.html';
+                link.innerHTML = `<img src="${avatarUrl}" class="header-avatar" style="width:28px; height:28px; border-radius:50%; object-fit:cover; border:2px solid var(--primary); vertical-align:middle; margin-right:8px;"> ${displayUser.username}`;
+            });
+        }
+    };
+
+    window.updateHeaderAvatar();
 
     const drawer = document.getElementById('route-drawer');
     document.getElementById('open-route-drawer').addEventListener('click', () => {

@@ -425,3 +425,45 @@ nav ul li a.active {
 .animate-fade-in {
   animation: fadeIn 0.8s ease forwards;
 }
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container { padding: 0 24px; }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    .section {
+        padding: 60px 0;
+    }
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-avatar {
+        display: none; /* Hide avatar name but keep icon if needed, or just shrink */
+    }
+    nav ul li a i {
+        margin: 0;
+    }
+    nav ul li a {
+        font-size: 12px;
+    }
+}
