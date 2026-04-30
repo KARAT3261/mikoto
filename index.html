@@ -71,23 +71,26 @@
             </div>
         </div>
         <div class="grid-3" style="margin-top: 0;">
-            <div class="card" onclick="window.location.href='planner.html'">
-                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Золотой маршрут">
-                <div class="card-content">
+            <div class="card">
+                <div class="favorite-btn" data-id="route_golden"><i class="fa-regular fa-heart"></i></div>
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Золотой маршрут" onclick="loadPresetRoute('golden')">
+                <div class="card-content" onclick="loadPresetRoute('golden')">
                     <h3 class="card-title">Золотой маршрут (7 дней)</h3>
                     <p style="color:#ddd; font-size:14px;">Токио → Киото → Осака</p>
                 </div>
             </div>
-            <div class="card" onclick="window.location.href='planner.html'">
-                <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=800" alt="Аниме тур">
-                <div class="card-content">
+            <div class="card">
+                <div class="favorite-btn" data-id="route_otaku"><i class="fa-regular fa-heart"></i></div>
+                <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=800" alt="Аниме тур" onclick="loadPresetRoute('otaku')">
+                <div class="card-content" onclick="loadPresetRoute('otaku')">
                     <h3 class="card-title">Путь Отаку (5 дней)</h3>
                     <p style="color:#ddd; font-size:14px;">Акихабара, Ден Ден Таун, Музей Ghibli</p>
                 </div>
             </div>
-            <div class="card" onclick="window.location.href='planner.html'">
-                <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=800" alt="Гастро тур">
-                <div class="card-content">
+            <div class="card">
+                <div class="favorite-btn" data-id="route_food"><i class="fa-regular fa-heart"></i></div>
+                <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=800" alt="Гастро тур" onclick="loadPresetRoute('food')">
+                <div class="card-content" onclick="loadPresetRoute('food')">
                     <h3 class="card-title">Гастро-тур (3 дня)</h3>
                     <p style="color:#ddd; font-size:14px;">Стрит-фуд Осаки и рынки Токио</p>
                 </div>
@@ -133,6 +136,7 @@
         </div>
     </section>
 
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

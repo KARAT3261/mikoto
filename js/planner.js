@@ -9,6 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let dayCount = 2; // Starting with 2 days
     let currentEditingDay = null;
     let currentModalTab = 'my-route';
+    let jpyToRubRate = 0.62; // Fallback rate
+
+    // Fetch real-time rate
+    fetch('https://open.er-api.com/v6/latest/JPY')
+        .then(res => res.json())
+        .then(data => {
+            if (data && data.rates && data.rates.RUB) {
+                jpyToRubRate = data.rates.RUB;
+                renderPlannerBoard(); // Re-render with new rate
+            }
+        })
+        .catch(err => console.error("Error fetching exchange rate:", err));
 
     // Initialize Map (Leaflet)
     let map;
@@ -97,10 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else {
                     // It's a mock place, clone it
                     const clone = {...place, id: 'custom_'+Date.now(), day: currentEditingDay};
-                    MIKOTO_STATE.plannerItems.push(clone);
+                    window.MIKOTO_STATE.plannerItems.push(clone);
                 }
                 
-                if(typeof saveState === 'function') saveState();
+                if(typeof window.saveState === 'function') window.saveState();
                 
                 document.getElementById('place-selector-modal').style.display = 'none';
                 renderPlannerBoard();
@@ -177,6 +189,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         budgetAmount.innerText = currentTotalCost.toLocaleString('ru-RU');
+        
+        const rubAmount = document.getElementById("budget-rub");
+        if (rubAmount) {
+            const totalRub = Math.round(currentTotalCost * jpyToRubRate);
+            rubAmount.innerText = totalRub.toLocaleString('ru-RU');
+        }
     }
 
     function addNewDayColumn() {
@@ -186,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
         newDayCol.innerHTML = `
             <div class="day-header">
                 <h3>День ${dayCount}</h3>
-                <span class="day-date">Новый день</span>
+                <i class="fa-solid fa-trash-can remove-day-btn" onclick="removeDay('День ${dayCount}')" title="Удалить день" style="cursor:pointer; color:var(--text-muted); font-size:14px;"></i>
             </div>
             <div class="dropzone" id="day-${dayCount}" data-day="${dayCount}">
             </div>
@@ -196,6 +214,42 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         itineraryBoard.insertBefore(newDayCol, addDayBtn);
     }
+
+    window.removeDay = function(dayTitle) {
+        // Unassign items
+        window.MIKOTO_STATE.plannerItems.forEach(item => {
+            if (item.day === dayTitle) {
+                item.day = null;
+            }
+        });
+
+        // If it was the last day, decrement dayCount
+        if (dayTitle === `День ${dayCount}`) {
+            dayCount--;
+        }
+
+        // Find the column and remove it
+        const columns = document.querySelectorAll('.day-column');
+        columns.forEach(col => {
+            if (col.querySelector('h3').textContent.trim() === dayTitle) {
+                col.remove();
+            }
+        });
+
+        if (typeof window.saveState === 'function') window.saveState();
+        renderPlannerBoard();
+        if (window.renderDrawer) window.renderDrawer();
+    };
+
+    window.scrollBoard = function(amount) {
+        const board = document.getElementById('itinerary-board');
+        if (board) {
+            board.scrollBy({
+                left: amount,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     if(addDayBtn) {
         addDayBtn.addEventListener("click", () => {
@@ -208,7 +262,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const saveBtn = document.getElementById("save-plan-btn");
     if(saveBtn) {
         saveBtn.addEventListener("click", () => {
-            alert("Маршрут сохранён в профиль! Позже он будет доступен в личном кабинете.");
+            if (window.MIKOTO_STATE.plannerItems.length === 0) return;
+
+            const newPlan = {
+                id: 'plan_' + Date.now(),
+                date: new Date().toLocaleDateString('ru-RU'),
+                items: [...window.MIKOTO_STATE.plannerItems],
+                totalCost: currentTotalCost
+            };
+
+            window.MIKOTO_STATE.savedPlans.push(newPlan);
+            if (typeof window.saveState === 'function') window.saveState();
+            
+            const originalHTML = saveBtn.innerHTML;
+            saveBtn.innerHTML = '<i class="fa-solid fa-check"></i> Сохранено!';
+            saveBtn.style.background = '#2e7d32'; // Green
+            setTimeout(() => {
+                saveBtn.innerHTML = originalHTML;
+                saveBtn.style.background = '';
+            }, 2000);
         });
     }
 

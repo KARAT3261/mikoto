@@ -1,22 +1,97 @@
-// Global App Logic, State, Simulated Database
+window.MIKOTO_DB = [];
+try {
+    window.MIKOTO_DB = JSON.parse(localStorage.getItem('mikoto_users_db')) || [];
+} catch(e) { console.error("Error parsing MIKOTO_DB", e); }
 
-const MIKOTO_DB = JSON.parse(localStorage.getItem('mikoto_users_db')) || [];
-
-const MIKOTO_STATE = {
-    user: JSON.parse(localStorage.getItem('mikoto_user')) || {
-        username: '',
-        avatar: '',
-        email: ''
-    },
-    favorites: JSON.parse(localStorage.getItem('mikoto_favorites')) || [],
-    plannerItems: JSON.parse(localStorage.getItem('mikoto_planner_items')) || []
+window.MIKOTO_STATE = {
+    user: { username: '', avatar: '', email: '' },
+    favorites: [],
+    plannerItems: [],
+    savedPlans: []
 };
 
-function saveState() {
-    localStorage.setItem('mikoto_users_db', JSON.stringify(MIKOTO_DB));
-    localStorage.setItem('mikoto_user', JSON.stringify(MIKOTO_STATE.user));
-    localStorage.setItem('mikoto_favorites', JSON.stringify(MIKOTO_STATE.favorites));
-    localStorage.setItem('mikoto_planner_items', JSON.stringify(MIKOTO_STATE.plannerItems));
+try {
+    const savedUser = localStorage.getItem('mikoto_user');
+    if (savedUser) window.MIKOTO_STATE.user = JSON.parse(savedUser);
+    
+    const savedFavorites = localStorage.getItem('mikoto_favorites');
+    if (savedFavorites) window.MIKOTO_STATE.favorites = JSON.parse(savedFavorites);
+    
+    const savedItems = localStorage.getItem('mikoto_planner_items');
+    if (savedItems) window.MIKOTO_STATE.plannerItems = JSON.parse(savedItems);
+
+    const savedPlans = localStorage.getItem('mikoto_saved_plans');
+    if (savedPlans) window.MIKOTO_STATE.savedPlans = JSON.parse(savedPlans);
+} catch(e) {
+    console.error("Error parsing MIKOTO_STATE", e);
+}
+
+window.saveState = function() {
+    localStorage.setItem('mikoto_users_db', JSON.stringify(window.MIKOTO_DB));
+    localStorage.setItem('mikoto_user', JSON.stringify(window.MIKOTO_STATE.user));
+    localStorage.setItem('mikoto_favorites', JSON.stringify(window.MIKOTO_STATE.favorites));
+    localStorage.setItem('mikoto_planner_items', JSON.stringify(window.MIKOTO_STATE.plannerItems));
+    localStorage.setItem('mikoto_saved_plans', JSON.stringify(window.MIKOTO_STATE.savedPlans));
+    
+    // Save last user for persistence even when logged out
+    if(window.MIKOTO_STATE.user.username) {
+        localStorage.setItem('mikoto_last_user', JSON.stringify({
+            username: window.MIKOTO_STATE.user.username,
+            avatar: window.MIKOTO_STATE.user.avatar
+        }));
+    }
+}
+
+/**
+ * Loads a predefined route and redirects to the planner
+ * @param {string} routeType - 'golden', 'otaku', or 'food'
+ */
+window.loadPresetRoute = function(routeType) {
+    if (typeof MOCK_PLACES === 'undefined') {
+        console.error("MOCK_PLACES not found. Make sure data.js is loaded.");
+        // Fallback or just redirect
+        window.location.href = 'planner.html';
+        return;
+    }
+
+    let items = [];
+    
+    if (routeType === 'golden') {
+        items = [
+            { ...MOCK_PLACES.find(p => p.id === 'p1'), day: 'День 1' }, // Shibuya
+            { ...MOCK_PLACES.find(p => p.id === 'p2'), day: 'День 2' }, // Akihabara
+            { ...MOCK_PLACES.find(p => p.id === 'p6'), day: 'День 2' }, // Tokyo Tower
+            { ...MOCK_PLACES.find(p => p.id === 'p3'), day: 'День 3' }, // Fushimi Inari
+            { ...MOCK_PLACES.find(p => p.id === 'p9'), day: 'День 4' }, // Kinkaku-ji
+            { ...MOCK_PLACES.find(p => p.id === 'p10'), day: 'День 5' }, // Gion
+            { ...MOCK_PLACES.find(p => p.id === 'p11'), day: 'День 6' }, // Dotonbori
+            { ...MOCK_PLACES.find(p => p.id === 'p12'), day: 'День 7' }  // Osaka Castle
+        ];
+    } else if (routeType === 'otaku') {
+        items = [
+            { ...MOCK_PLACES.find(p => p.id === 'p2'), day: 'День 1' }, // Akihabara
+            { ...MOCK_PLACES.find(p => p.id === 'p1'), day: 'День 1' }, // Shibuya (Manga stores)
+            { ...MOCK_PLACES.find(p => p.id === 'p2'), name: "Ghibli Museum", city: "Токио", type: "anime", img: "https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=150", cost: 1000, time: "4 часа", lat: 35.6963, lng: 139.5704, day: 'День 2' },
+            { ...MOCK_PLACES.find(p => p.id === 'p13'), day: 'День 4' }, // USJ
+            { ...MOCK_PLACES.find(p => p.id === 'p5'), day: 'День 4' }  // Ichiran
+        ];
+    } else if (routeType === 'food') {
+        items = [
+            { ...MOCK_PLACES.find(p => p.id === 'p8'), day: 'День 1' }, // Omoide Yokocho
+            { ...MOCK_PLACES.find(p => p.id === 'p11'), day: 'День 2' }, // Dotonbori
+            { ...MOCK_PLACES.find(p => p.id === 'p5'), day: 'День 2' }, // Ichiran
+            { ...MOCK_PLACES.find(p => p.id === 'p15'), day: 'День 3' } // Sapporo Beer Museum
+        ];
+    }
+
+    // Filter out undefined if any place was not found
+    MIKOTO_STATE.plannerItems = items.filter(i => i && (i.id || i.name)).map(i => ({
+        ...i,
+        id: i.id || ('preset_' + Math.random().toString(36).substr(2, 9))
+    }));
+
+    saveState();
+    window.location.href = 'planner.html';
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -41,6 +116,30 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
     `;
     document.body.insertAdjacentHTML('beforeend', drawerHTML);
+
+    // Update Profile Link with Avatar (For all pages)
+    const profileLinks = document.querySelectorAll('nav a[href="profile.html"], nav a[href="auth.html"]');
+    
+    let displayUser = window.MIKOTO_STATE.user.username ? window.MIKOTO_STATE.user : null;
+    
+    // If not logged in, try to get last user
+    if(!displayUser) {
+        try {
+            const lastUserStr = localStorage.getItem('mikoto_last_user');
+            if(lastUserStr) {
+                displayUser = JSON.parse(lastUserStr);
+            }
+        } catch(e) {}
+    }
+
+    if(displayUser && displayUser.username) {
+        profileLinks.forEach(link => {
+            const avatarUrl = displayUser.avatar || `https://ui-avatars.com/api/?name=${displayUser.username}&background=d32f2f&color=fff`;
+            // Only redirect to profile if actually logged in
+            if (window.MIKOTO_STATE.user.username) link.href = 'profile.html';
+            link.innerHTML = `<img src="${avatarUrl}" style="width:28px; height:28px; border-radius:50%; object-fit:cover; border:2px solid var(--primary); vertical-align:middle; margin-right:8px;"> ${displayUser.username}`;
+        });
+    }
 
     const drawer = document.getElementById('route-drawer');
     document.getElementById('open-route-drawer').addEventListener('click', () => {
@@ -129,8 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const type = btn.dataset.type || 'food';
             
             // Check if already in plan
-            if(MIKOTO_STATE.plannerItems.find(i => i.name === name)) {
-                alert("Уже добавлено в маршрут!");
+            if(window.MIKOTO_STATE.plannerItems.find(i => i.name === name)) {
                 return;
             }
 
@@ -178,20 +276,55 @@ document.addEventListener("DOMContentLoaded", () => {
     // Favorites Logic
     document.querySelectorAll('.favorite-btn').forEach(btn => {
         const itemId = btn.dataset.id;
-        if(MIKOTO_STATE.favorites.includes(itemId)) {
+        
+        // Check if active
+        if(window.MIKOTO_STATE.favorites.find(f => f.id === itemId)) {
             btn.classList.add('active');
-            btn.innerHTML = '<i class="fa-solid fa-heart" style="color:var(--primary);"></i>';
+            btn.innerHTML = '<i class="fa-solid fa-heart" style="color:#fff;"></i>';
         }
 
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            if(MIKOTO_STATE.favorites.includes(itemId)) {
-                MIKOTO_STATE.favorites = MIKOTO_STATE.favorites.filter(id => id !== itemId);
+            
+            const existing = window.MIKOTO_STATE.favorites.find(f => f.id === itemId);
+            
+            if(existing) {
+                window.MIKOTO_STATE.favorites = window.MIKOTO_STATE.favorites.filter(f => f.id !== itemId);
+                btn.classList.remove('active');
                 btn.innerHTML = '<i class="fa-regular fa-heart"></i>';
             } else {
-                MIKOTO_STATE.favorites.push(itemId);
-                btn.innerHTML = '<i class="fa-solid fa-heart" style="color:var(--primary);"></i>';
+                // Find parent card to get metadata
+                const card = btn.closest('.card, .dish-card, .anime-feature-card, .landmark-item');
+                let itemData = { 
+                    id: itemId,
+                    name: btn.dataset.name || 'Япония',
+                    img: btn.dataset.img || '',
+                    city: btn.dataset.city || 'Япония'
+                };
+
+                if(card) {
+                    // Try to find image
+                    const img = card.querySelector('img');
+                    if(img && !itemData.img) itemData.img = img.src;
+
+                    // Try to find name (h3 or .card-title)
+                    const title = card.querySelector('h3, .card-title');
+                    if(title && itemData.name === 'Япония') {
+                        // Clone to remove spans (like .jp-name)
+                        const titleClone = title.cloneNode(true);
+                        titleClone.querySelectorAll('span').forEach(s => s.remove());
+                        itemData.name = titleClone.innerText.trim();
+                    }
+
+                    // Try to find city/meta
+                    const meta = card.querySelector('.card-meta, .jp-name, .city-tag');
+                    if(meta && itemData.city === 'Япония') itemData.city = meta.innerText.trim();
+                }
+
+                window.MIKOTO_STATE.favorites.push(itemData);
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fa-solid fa-heart" style="color:#fff;"></i>';
             }
             saveState();
         });
@@ -248,6 +381,5 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = 'profile.html';
         });
     }
-
 
 });

@@ -37,11 +37,9 @@
             display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px;
             align-items: center;
             transition: var(--transition);
+            position: relative; /* For favorite button overlay */
         }
-        .landmark-item:hover {
-            border-color: var(--primary);
-            background: rgba(30, 41, 59, 0.6);
-        }
+        /* Hover effect removed per user request */
         .landmark-item img { width: 300px; height: 200px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0; }
         .landmark-content { flex: 1; }
         .landmark-content h3 { font-size: 24px; margin-bottom: 12px; }
@@ -71,6 +69,7 @@
     </header>
 
     <div class="city-hero">
+        <div class="favorite-btn" data-id="city_osaka" style="top:24px; right:24px; width:50px; height:50px; font-size:24px;"><i class="fa-regular fa-heart"></i></div>
         <div class="container city-header-content">
             <h1 style="font-size: 64px; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">Осака <span style="color: var(--primary); font-family: var(--font-jp);">大阪</span></h1>
             <p style="font-size: 20px; color: #ddd; max-width: 600px; margin-top:16px;">Кулинарная столица Японии с неоновыми улицами, бесконечным стрит-фудом и открытым, громким характером региона Кансай.</p>
@@ -105,6 +104,7 @@
             <div class="landmark-list">
                 <!-- Dotonbori -->
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="osaka_dotonbori"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://i.pinimg.com/1200x/86/27/13/862713368b906e0cc9d9be04546d6670.jpg" alt="Дотонбори">
                     <div class="landmark-content">
                         <h3>Улица Дотонбори</h3>
@@ -117,6 +117,7 @@
 
                 <!-- Osaka Castle -->
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="osaka_castle"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://i.pinimg.com/736x/38/e5/db/38e5db0238229dcc5af6b288b408948b.jpg" alt="Замок Осаки">
                     <div class="landmark-content">
                         <h3>Осакский замок (Осакадзё)</h3>
@@ -129,6 +130,7 @@
 
                 <!-- Shinsekai -->
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="osaka_shinsekai"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://i.pinimg.com/1200x/f2/e2/fa/f2e2fa5295ca489ebd6e940fb2bef2c1.jpg" alt="Синсэкай">
                     <div class="landmark-content">
                         <h3>Район Синсэкай и Башня Цутэнкаку</h3>
@@ -141,6 +143,7 @@
 
                 <!-- USJ -->
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="osaka_usj"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://i.pinimg.com/1200x/81/58/f1/8158f1dc2c820cfb1cae2cf1bbfbfb26.jpg" alt="USJ">
                     <div class="landmark-content">
                         <h3>Universal Studios Japan</h3>

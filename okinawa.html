@@ -16,8 +16,9 @@
         .article-section h2 { margin-bottom: 24px; color: var(--primary); font-size: 32px; border-bottom: 1px solid var(--glass-border); padding-bottom: 12px; }
         .article-text { font-size: 18px; line-height: 1.8; color: #ddd; margin-bottom: 24px; }
         .landmark-list { display: flex; flex-direction: column; gap: 32px; }
-        .landmark-item { display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px; align-items: center; transition: var(--transition); }
-        .landmark-item:hover { border-color: var(--primary); background: rgba(30, 41, 59, 0.6); }
+        .landmark-item { display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px; align-items: center; transition: var(--transition); position: relative; }
+        /* Hover effect removed per user request */
+        .landmark-item:hover { border-color: var(--glass-border); }
         .landmark-item img { width: 300px; height: 200px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0; }
         .landmark-content { flex: 1; }
         .landmark-content h3 { font-size: 24px; margin-bottom: 12px; }
@@ -43,6 +44,7 @@
     </header>
 
     <div class="city-hero">
+        <div class="favorite-btn" data-id="city_okinawa" style="top:24px; right:24px; width:50px; height:50px; font-size:24px;"><i class="fa-regular fa-heart"></i></div>
         <div class="container city-header-content">
             <h1 style="font-size: 64px; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">Окинава <span style="color: var(--primary); font-family: var(--font-jp);">沖縄</span></h1>
             <p style="font-size: 20px; color: #ddd; max-width: 600px; margin-top:16px;">Тропический рай Японии. Белоснежные пляжи, коралловые рифы и уникальная культура исчезнувшего королевства Рюкю.</p>
@@ -74,6 +76,7 @@
             <h2>Главные локации</h2>
             <div class="landmark-list">
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="okinawa_ishigaki"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://i.pinimg.com/1200x/74/2d/d3/742dd398d5cc760b35348d86a24a0e44.jpg" alt="Пляж Исигаки">
                     <div class="landmark-content">
                         <h3>Остров Исигаки</h3>
@@ -84,6 +87,7 @@
                     </div>
                 </div>
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="okinawa_churaumi"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://i.pinimg.com/1200x/b9/3e/60/b93e6032d5b544dd1b4ef01f3ed20c45.jpg" alt="Океанариум Тюрауми">
                     <div class="landmark-content">
                         <h3>Океанариум Тюрауми</h3>
@@ -94,6 +98,7 @@
                     </div>
                 </div>
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="okinawa_shuri"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://i.pinimg.com/736x/c0/bb/b5/c0bbb5d5702825aa1e7e74e61973f040.jpg" alt="Замок Сюри">
                     <div class="landmark-content">
                         <h3>Замок Сюри (Наха)</h3>

@@ -45,12 +45,10 @@
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    position: relative; /* For favorite button overlay */
 }
 
-.dish-card:hover {
-    border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(211, 47, 47, 0.15);
-}
+/* Hover effect removed per user request */
 
 .add-food-btn {
     width: 40px;

@@ -38,10 +38,10 @@
             <div class="budget-panel glass-panel">
                 <div>
                     <h2>Ваш Маршрут</h2>
-                    <p style="color:var(--text-muted); font-size:14px;">Перетащите карточки в дни, чтобы составить план.</p>
                 </div>
                 <div class="budget-total">
-                    Ориентировочно: <span id="budget-amount">0</span> ¥
+                    Ориентировочно: <span id="budget-amount">0</span> ¥ 
+                    <span style="font-size: 16px; color: var(--text-muted); margin-left: 10px;">(≈ <span id="budget-rub">0</span> ₽)</span>
                 </div>
                 <button class="btn-primary" id="save-plan-btn"><i class="fa-solid fa-cloud-arrow-up"></i> Сохранить</button>
             </div>
@@ -52,36 +52,40 @@
             </div>
 
             <!-- Days Itinerary Area -->
-            <div class="itinerary-board" id="itinerary-board">
-                <!-- Day 1 -->
-                <div class="day-column">
-                    <div class="day-header">
-                        <h3>День 1</h3>
-                        <span class="day-date">Токио</span>
+            <div class="itinerary-wrapper">
+                <button class="board-scroll-btn left" onclick="scrollBoard(-350)" id="scroll-left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="itinerary-board" id="itinerary-board">
+                    <!-- Day 1 -->
+                    <div class="day-column">
+                        <div class="day-header">
+                            <h3>День 1</h3>
+                            <i class="fa-solid fa-trash-can remove-day-btn" onclick="removeDay('День 1')" title="Удалить день" style="cursor:pointer; color:var(--text-muted); font-size:14px;"></i>
+                        </div>
+                        <div class="dropzone" id="day-1" data-day="1">
+                            <!-- Items will be dropped here -->
+                        </div>
+                        <button class="add-to-day-btn" onclick="openPlaceSelector('День 1')">
+                            <i class="fa-solid fa-plus" style="margin-right:8px;"></i> Добавить место
+                        </button>
                     </div>
-                    <div class="dropzone" id="day-1" data-day="1">
-                        <!-- Items will be dropped here -->
+                    <!-- Day 2 -->
+                    <div class="day-column">
+                        <div class="day-header">
+                            <h3>День 2</h3>
+                            <i class="fa-solid fa-trash-can remove-day-btn" onclick="removeDay('День 2')" title="Удалить день" style="cursor:pointer; color:var(--text-muted); font-size:14px;"></i>
+                        </div>
+                        <div class="dropzone" id="day-2" data-day="2">
+                        </div>
+                        <button class="add-to-day-btn" onclick="openPlaceSelector('День 2')">
+                            <i class="fa-solid fa-plus" style="margin-right:8px;"></i> Добавить место
+                        </button>
                     </div>
-                    <button class="add-to-day-btn" onclick="openPlaceSelector('День 1')">
-                        <i class="fa-solid fa-plus" style="margin-right:8px;"></i> Добавить место
+                    <!-- Add new day button -->
+                    <button class="btn-secondary" id="add-day-btn" style="height:fit-content; white-space:nowrap; margin-right: 50px;">
+                        <i class="fa-solid fa-plus"></i> Добавить день
                     </button>
                 </div>
-                <!-- Day 2 -->
-                <div class="day-column">
-                    <div class="day-header">
-                        <h3>День 2</h3>
-                        <span class="day-date">Токио -> Киото</span>
-                    </div>
-                    <div class="dropzone" id="day-2" data-day="2">
-                    </div>
-                    <button class="add-to-day-btn" onclick="openPlaceSelector('День 2')">
-                        <i class="fa-solid fa-plus" style="margin-right:8px;"></i> Добавить место
-                    </button>
-                </div>
-                <!-- Add new day button -->
-                <button class="btn-secondary" id="add-day-btn" style="height:fit-content; white-space:nowrap;">
-                    <i class="fa-solid fa-plus"></i> Добавить день
-                </button>
+                <button class="board-scroll-btn right" onclick="scrollBoard(350)" id="scroll-right-btn"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </main>
     </div>
@@ -96,9 +100,9 @@
                 <button onclick="document.getElementById('place-selector-modal').style.display='none'" style="background:none; border:none; color:var(--text-color); font-size:24px; cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
             </div>
             
-            <div class="auth-tabs" style="display:flex; margin-bottom:16px; border-bottom:1px solid var(--glass-border);">
-                <div class="auth-tab active" id="tab-my-route" onclick="switchModalTab('my-route')" style="flex:1; text-align:center; padding:12px; cursor:pointer; color:var(--primary); border-bottom:2px solid var(--primary);">Мой маршрут</div>
-                <div class="auth-tab" id="tab-all-places" onclick="switchModalTab('all-places')" style="flex:1; text-align:center; padding:12px; cursor:pointer; color:var(--text-muted);">Все локации</div>
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="tab-my-route" onclick="switchModalTab('my-route')">Мой маршрут</div>
+                <div class="auth-tab" id="tab-all-places" onclick="switchModalTab('all-places')">Все локации</div>
             </div>
             
             <div style="margin-bottom: 16px;">

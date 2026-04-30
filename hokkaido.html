@@ -16,8 +16,8 @@
         .article-section h2 { margin-bottom: 24px; color: var(--primary); font-size: 32px; border-bottom: 1px solid var(--glass-border); padding-bottom: 12px; }
         .article-text { font-size: 18px; line-height: 1.8; color: #ddd; margin-bottom: 24px; }
         .landmark-list { display: flex; flex-direction: column; gap: 32px; }
-        .landmark-item { display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px; align-items: center; transition: var(--transition); }
-        .landmark-item:hover { border-color: var(--primary); background: rgba(30, 41, 59, 0.6); }
+        .landmark-item { display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px; align-items: center; transition: var(--transition); position: relative; }
+        /* Hover effect removed per user request */
         .landmark-item img { width: 300px; height: 200px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0; }
         .landmark-content { flex: 1; }
         .landmark-content h3 { font-size: 24px; margin-bottom: 12px; }
@@ -43,6 +43,7 @@
     </header>
 
     <div class="city-hero">
+        <div class="favorite-btn" data-id="city_hokkaido" style="top:24px; right:24px; width:50px; height:50px; font-size:24px;"><i class="fa-regular fa-heart"></i></div>
         <div class="container city-header-content">
             <h1 style="font-size: 64px; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">Хоккайдо <span style="color: var(--primary); font-family: var(--font-jp);">北海道</span></h1>
             <p style="font-size: 20px; color: #ddd; max-width: 600px; margin-top:16px;">Самый северный остров Японии. Зимняя сказка, невероятная природа, горячие источники и лучшие морепродукты во всей стране.</p>
@@ -74,6 +75,7 @@
             <h2>Главные локации</h2>
             <div class="landmark-list">
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="hokkaido_odori"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://i.pinimg.com/1200x/4d/90/ad/4d90adc132f809a7a22d5e5b18a2d1e3.jpg" alt="Парк Одори">
                     <div class="landmark-content">
                         <h3>Парк Одори (Саппоро)</h3>
@@ -84,6 +86,7 @@
                     </div>
                 </div>
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="hokkaido_beer"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://images.unsplash.com/photo-1618218168350-6e7c81151b64?q=80&w=800&auto=format&fit=crop" alt="Музей пива Саппоро">
                     <div class="landmark-content">
                         <h3>Музей пива Саппоро</h3>
@@ -94,6 +97,7 @@
                     </div>
                 </div>
                 <div class="landmark-item">
+                    <div class="favorite-btn" data-id="hokkaido_niseko"><i class="fa-regular fa-heart"></i></div>
                     <img src="https://i.pinimg.com/1200x/39/88/85/398885fc3f3abbcf069ebb2393058a02.jpg" alt="Нисеко">
                     <div class="landmark-content">
                         <h3>Курорт Нисеко</h3>
