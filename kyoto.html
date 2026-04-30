@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микото — Киото</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .city-hero { height: 70vh; background: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop') center/cover; position: relative; display: flex; align-items: flex-end; padding-bottom: 60px; }
+        .city-hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0.2) 100%); z-index: 1; }
+        .city-header-content { position: relative; z-index: 2; }
+        .city-stats { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; }
+        .stat-box { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 12px 24px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1); }
+        .article-section { margin-bottom: 64px; }
+        .article-section h2 { margin-bottom: 24px; color: var(--primary); font-size: 32px; border-bottom: 1px solid var(--glass-border); padding-bottom: 12px; }
+        .article-text { font-size: 18px; line-height: 1.8; color: #ddd; margin-bottom: 24px; }
+        
+        .landmark-list { display: flex; flex-direction: column; gap: 32px; }
+        .landmark-item { display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px; align-items: center; transition: var(--transition); }
+        .landmark-item:hover { border-color: var(--primary); background: rgba(30, 41, 59, 0.6); }
+        .landmark-item img { width: 300px; height: 200px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0; }
+        .landmark-content { flex: 1; }
+        .landmark-content h3 { font-size: 24px; margin-bottom: 12px; }
+        .landmark-content p { color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+        @media (max-width: 768px) { .landmark-item { flex-direction: column; } .landmark-item img { width: 100%; height: auto; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-torii-gate"></i> Микото<span>.</span></a>
+            <nav>
+                <ul>
+                    <li><a href="planner.html"><i class="fa-solid fa-map-location-dot"></i> Планировщик</a></li>
+                    <li><a href="cities.html" class="active">Города</a></li>
+                    <li><a href="culture.html">Культура</a></li>
+                    <li><a href="food.html">Еда</a></li>
+                    <li><a href="anime.html">Аниме</a></li>
+                    <li><a href="auth.html"><i class="fa-regular fa-user"></i> Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="city-hero">
+        <div class="container city-header-content">
+            <h1 style="font-size: 64px; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">Киото <span style="color: var(--primary); font-family: var(--font-jp);">京都</span></h1>
+            <p style="font-size: 20px; color: #ddd; max-width: 600px; margin-top:16px;">Древняя столица и культурное сердце Японии, где тысячи храмов и святилищ хранят многовековую историю и традиции.</p>
+            <div class="city-stats">
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Регион</div>
+                    <div style="font-weight: bold; font-size: 18px;">Кансай</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Идеально для</div>
+                    <div style="font-weight: bold; font-size: 18px;">3-5 дней</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Главная особенность</div>
+                    <div style="font-weight: bold; font-size: 18px;">Культура и Храмы</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container" style="padding: 64px 0;">
+        <section class="article-section">
+            <h2>Тысячелетняя столица</h2>
+            <p class="article-text">На протяжении более тысячи лет Киото был императорской столицей Японии. Это город, где традиционная культура сохранилась в первозданном виде. В отличие от разрушенных во время войны городов, Киото сохранил свою историческую деревянную архитектуру, узкие улочки с чайными домиками и сады камней.</p>
+            <p class="article-text">В районе Гион до сих пор можно встретить настоящих гейш (в Киото их называют <em>гейко</em>) и их учениц — майко, спешащих на вечерние банкеты в традиционных кимоно и деревянных сандалиях гэта.</p>
+        </section>
+
+        <section class="article-section">
+            <h2>Главные локации</h2>
+            <div class="landmark-list">
+                <div class="landmark-item">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop" alt="Фусими Инари">
+                    <div class="landmark-content">
+                        <h3>Святилище Фусими Инари</h3>
+                        <p>Главный синтоистский храм богини риса и изобилия Инари. Знаменит своим туннелем из тысяч ярко-красных врат <em>тории</em>, ведущих на вершину священной горы. Дорога наверх занимает около двух часов и окружена сотнями статуй лис — посланников богини.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Фусими Инари" data-city="Киото" data-type="culture" data-cost="0" data-img="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+                <div class="landmark-item">
+                    <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=800&auto=format&fit=crop" alt="Кинкаку-дзи">
+                    <div class="landmark-content">
+                        <h3>Золотой павильон (Кинкаку-дзи)</h3>
+                        <p>Дзен-буддийский храм, два верхних этажа которого полностью покрыты сусальным золотом. Отражаясь в окружающем его пруду-зеркале, Кинкаку-дзи представляет собой один из самых открыточных и завораживающих видов Японии.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Кинкаку-дзи" data-city="Киото" data-type="culture" data-cost="500" data-img="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/1200x/ff/5d/b1/ff5db183c38efac5a6c9f00ee465ff0e.jpg" alt="Лес Арасияма">
+                    <div class="landmark-content">
+                        <h3>Бамбуковый лес Арасияма</h3>
+                        <p>На западной окраине Киото раскинулась роща высоченного бамбука. Шум ветра, проходящего сквозь стебли, официально внесен правительством Японии в список "ста звуковых ландшафтов страны".</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Бамбуковый лес Арасияма" data-city="Киото" data-type="nature" data-cost="0" data-img="https://plus.unsplash.com/premium_photo-1661877685361-9c16823902f5?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+                <div class="landmark-item">
+                    <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=800&auto=format&fit=crop" alt="Киёмидзу-дэра">
+                    <div class="landmark-content">
+                        <h3>Храм Киёмидзу-дэра</h3>
+                        <p>Храм Чистой Воды, построенный на склоне горы Отова без единого гвоздя. С его огромной деревянной веранды открывается потрясающий вид на весь Киото, особенно в сезон цветения сакуры и багряных клёнов.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Киёмидзу-дэра" data-city="Киото" data-type="culture" data-cost="400" data-img="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

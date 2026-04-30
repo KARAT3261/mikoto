@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микото — Осака</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .city-hero {
+            height: 70vh;
+            background: url('https://i.pinimg.com/1200x/3b/8d/14/3b8d149be62653340aa90e4c092a116f.jpg') center/cover;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 60px;
+        }
+        .city-hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0.2) 100%);
+            z-index: 1;
+        }
+        .city-header-content { position: relative; z-index: 2; }
+        .city-stats { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; }
+        .stat-box {
+            background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+            padding: 12px 24px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1);
+        }
+        .article-section { margin-bottom: 64px; }
+        .article-section h2 { margin-bottom: 24px; color: var(--primary); font-size: 32px; border-bottom: 1px solid var(--glass-border); padding-bottom: 12px; }
+        .article-text { font-size: 18px; line-height: 1.8; color: #ddd; margin-bottom: 24px; }
+        
+        .landmark-list { display: flex; flex-direction: column; gap: 32px; }
+        .landmark-item {
+            display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .landmark-item:hover {
+            border-color: var(--primary);
+            background: rgba(30, 41, 59, 0.6);
+        }
+        .landmark-item img { width: 300px; height: 200px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0; }
+        .landmark-content { flex: 1; }
+        .landmark-content h3 { font-size: 24px; margin-bottom: 12px; }
+        .landmark-content p { color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+        
+        @media (max-width: 768px) {
+            .landmark-item { flex-direction: column; }
+            .landmark-item img { width: 100%; height: auto; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-torii-gate"></i> Микото<span>.</span></a>
+            <nav>
+                <ul>
+                    <li><a href="planner.html"><i class="fa-solid fa-map-location-dot"></i> Планировщик</a></li>
+                    <li><a href="cities.html" class="active">Города</a></li>
+                    <li><a href="culture.html">Культура</a></li>
+                    <li><a href="food.html">Еда</a></li>
+                    <li><a href="anime.html">Аниме</a></li>
+                    <li><a href="auth.html"><i class="fa-regular fa-user"></i> Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="city-hero">
+        <div class="container city-header-content">
+            <h1 style="font-size: 64px; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">Осака <span style="color: var(--primary); font-family: var(--font-jp);">大阪</span></h1>
+            <p style="font-size: 20px; color: #ddd; max-width: 600px; margin-top:16px;">Кулинарная столица Японии с неоновыми улицами, бесконечным стрит-фудом и открытым, громким характером региона Кансай.</p>
+            <div class="city-stats">
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Регион</div>
+                    <div style="font-weight: bold; font-size: 18px;">Кансай</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Идеально для</div>
+                    <div style="font-weight: bold; font-size: 18px;">2-4 дней</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Главная особенность</div>
+                    <div style="font-weight: bold; font-size: 18px;">Еда и развлечения</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container" style="padding: 64px 0;">
+        
+        <section class="article-section">
+            <h2>Куидаорэ — "Ешь, пока не разоришься"</h2>
+            <p class="article-text">В отличие от сдержанного и традиционного Киото, Осака — это город торговцев, веселья и безграничной любви к еде. Осакцы славятся своим открытым характером и особым диалектом (кансай-бэн). Здесь родилась концепция <strong>"Куидаорэ"</strong> — тратить все деньги на еду.</p>
+            <p class="article-text">Именно Осака подарила миру такояки (шарики с осьминогом) и окономияки (сытные японские блины, жареные на теппане). Прогулка по вечерней Осаке — это погружение в мир запахов жареного мяса, бульонов и ярких неоновых вывесок.</p>
+        </section>
+
+        <section class="article-section">
+            <h2>Главные локации</h2>
+            
+            <div class="landmark-list">
+                <!-- Dotonbori -->
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/1200x/86/27/13/862713368b906e0cc9d9be04546d6670.jpg" alt="Дотонбори">
+                    <div class="landmark-content">
+                        <h3>Улица Дотонбори</h3>
+                        <p>Сердце вечерней Осаки. Канал, окруженный гигантскими механическими вывесками (включая знаменитого бегуна Glico) и сотнями заведений уличной еды. Идеальное место для вечерней прогулки и дегустации такояки.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Улица Дотонбори" data-city="Осака" data-type="food" data-cost="2000" data-img="https://images.unsplash.com/photo-1590559899731-a382839cecdf?q=80&w=800&auto=format&fit=crop">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Osaka Castle -->
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/736x/38/e5/db/38e5db0238229dcc5af6b288b408948b.jpg" alt="Замок Осаки">
+                    <div class="landmark-content">
+                        <h3>Осакский замок (Осакадзё)</h3>
+                        <p>Один из самых известных замков Японии, сыгравший ключевую роль в объединении страны в 16 веке. Вокруг замка разбит прекрасный парк, который особенно красив в сезон цветения сакуры (весной) и кленов (осенью).</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Замок Осаки" data-city="Осака" data-type="culture" data-cost="600" data-img="https://images.unsplash.com/photo-1582650058988-81206f3dc8f5?q=80&w=800&auto=format&fit=crop">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Shinsekai -->
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/1200x/f2/e2/fa/f2e2fa5295ca489ebd6e940fb2bef2c1.jpg" alt="Синсэкай">
+                    <div class="landmark-content">
+                        <h3>Район Синсэкай и Башня Цутэнкаку</h3>
+                        <p>Ретро-район, созданный в начале 20 века как "Новый мир" и сохранивший атмосферу Японии 80-х годов. Это лучшее место, чтобы попробовать кусикацу (шашлычки во фритюре) и насладиться винтажным колоритом.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Район Синсэкай" data-city="Осака" data-type="culture" data-cost="0" data-img="https://images.unsplash.com/photo-1587825227749-c127e2a969df?q=80&w=800&auto=format&fit=crop">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+
+                <!-- USJ -->
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/1200x/81/58/f1/8158f1dc2c820cfb1cae2cf1bbfbfb26.jpg" alt="USJ">
+                    <div class="landmark-content">
+                        <h3>Universal Studios Japan</h3>
+                        <p>Огромный парк развлечений мирового уровня. Главные хиты парка — Замок Хогвартс из «Гарри Поттера» и невероятная зона Super Nintendo World, где вы можете буквально попасть внутрь игры про Марио.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Universal Studios" data-city="Осака" data-type="anime" data-cost="8400" data-img="https://images.unsplash.com/photo-1538350170068-18e55e71465a?q=80&w=800&auto=format&fit=crop">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JS for planner adding functionality -->
+    <script src="js/main.js"></script>
+</body>
+</html>

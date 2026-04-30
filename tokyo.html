@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микото — Токио</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .city-hero {
+            height: 70vh;
+            background: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=2000&auto=format&fit=crop') center/cover;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 60px;
+        }
+        .city-hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0.2) 100%);
+            z-index: 1;
+        }
+        .city-header-content { position: relative; z-index: 2; }
+        .city-stats { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; }
+        .stat-box {
+            background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+            padding: 12px 24px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1);
+        }
+        .article-section { margin-bottom: 64px; }
+        .article-section h2 { margin-bottom: 24px; color: var(--primary); font-size: 32px; border-bottom: 1px solid var(--glass-border); padding-bottom: 12px; }
+        .article-text { font-size: 18px; line-height: 1.8; color: #ddd; margin-bottom: 24px; }
+        
+        .landmark-list { display: flex; flex-direction: column; gap: 32px; }
+        .landmark-item {
+            display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .landmark-item:hover {
+            border-color: var(--primary);
+            background: rgba(30, 41, 59, 0.6);
+        }
+        .landmark-item img { width: 300px; height: 200px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0; }
+        .landmark-content { flex: 1; }
+        .landmark-content h3 { font-size: 24px; margin-bottom: 12px; }
+        .landmark-content p { color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+        
+        @media (max-width: 768px) {
+            .landmark-item { flex-direction: column; }
+            .landmark-item img { width: 100%; height: auto; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-torii-gate"></i> Микото<span>.</span></a>
+            <nav>
+                <ul>
+                    <li><a href="planner.html"><i class="fa-solid fa-map-location-dot"></i> Планировщик</a></li>
+                    <li><a href="cities.html" class="active">Города</a></li>
+                    <li><a href="culture.html">Культура</a></li>
+                    <li><a href="food.html">Еда</a></li>
+                    <li><a href="anime.html">Аниме</a></li>
+                    <li><a href="auth.html"><i class="fa-regular fa-user"></i> Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="city-hero">
+        <div class="container city-header-content">
+            <h1 style="font-size: 64px; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">Токио <span style="color: var(--primary); font-family: var(--font-jp);">東京</span></h1>
+            <p style="font-size: 20px; color: #ddd; max-width: 600px; margin-top:16px;">Мегаполис контрастов, где ультрасовременные неоновые технологии гармонично соседствуют с древними храмами и тихими садами.</p>
+            <div class="city-stats">
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Регион</div>
+                    <div style="font-weight: bold; font-size: 18px;">Канто</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Идеально для</div>
+                    <div style="font-weight: bold; font-size: 18px;">4-7 дней</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Главная особенность</div>
+                    <div style="font-weight: bold; font-size: 18px;">Киберпанк и Традиции</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container" style="padding: 64px 0;">
+        
+        <section class="article-section">
+            <h2>Столица будущего</h2>
+            <p class="article-text">Токио — это не просто город, это скопление десятков уникальных городов внутри одного огромного мегаполиса. От делового и строгого Маруноути до молодежного и яркого Харадзюку — здесь каждый район имеет свое неповторимое лицо и атмосферу.</p>
+            <p class="article-text">Этот город никогда не спит, но в то же время здесь всегда можно найти умиротворение. Достаточно свернуть с оживленной улицы Сибуя, чтобы оказаться в тихом синтоистском святилище Мэйдзи, окруженном лесом, посаженным вручную более века назад.</p>
+        </section>
+
+        <section class="article-section">
+            <h2>Главные локации</h2>
+            
+            <div class="landmark-list">
+                <!-- Shibuya -->
+                <div class="landmark-item">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800&auto=format&fit=crop" alt="Сибуя">
+                    <div class="landmark-content">
+                        <h3>Перекрёсток Сибуя</h3>
+                        <p>Самый загруженный перекрёсток в мире, который одновременно переходят до 3000 человек. Сердце молодежной культуры Токио, окруженное гигантскими экранами и бутиками. Рядом находится знаменитый памятник верному псу Хатико.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Перекрёсток Сибуя" data-city="Токио" data-type="culture" data-cost="0" data-img="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800&auto=format&fit=crop">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Senso-ji -->
+                <div class="landmark-item">
+                    <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=800&auto=format&fit=crop" alt="Сэнсо-дзи">
+                    <div class="landmark-content">
+                        <h3>Храм Сэнсо-дзи (Асакуса)</h3>
+                        <p>Старейший и самый значимый буддийский храм Токио. Прогуляйтесь по торговой улице Накамисэ до Врат Грома (Каминаримон) с гигантским красным фонарем. Идеальное место для покупки традиционных сувениров и уличной еды.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Храм Сэнсо-дзи" data-city="Токио" data-type="culture" data-cost="0" data-img="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=800&auto=format&fit=crop">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Akihabara -->
+                <div class="landmark-item">
+                    <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=800&auto=format&fit=crop" alt="Акихабара">
+                    <div class="landmark-content">
+                        <h3>Акихабара (Электрический город)</h3>
+                        <p>Мировая столица отаку-культуры. Улицы, залитые неоном и заполненные многоэтажными магазинами электроники, аниме, манги, ретро-игр и мейд-кафе. Рай для гиков и любителей поп-культуры.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Акихабара" data-city="Токио" data-type="anime" data-cost="0" data-img="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=800&auto=format&fit=crop">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Shinjuku / Omoide Yokocho -->
+                <div class="landmark-item">
+                    <img src="https://images.unsplash.com/photo-1558862107-d49ef2a04d72?q=80&w=800&auto=format&fit=crop" alt="Омоидэ Ёкочо">
+                    <div class="landmark-content">
+                        <h3>Омоидэ Ёкочо (Синдзюку)</h3>
+                        <p>Узкая улочка ("Аллея воспоминаний"), пропитанная дымом якитори. Это настоящий Токио эпохи Сёва, затерянный среди современных небоскребов Синдзюку. Отличное место, чтобы выпить сакэ и перекусить после заката.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Омоидэ Ёкочо" data-city="Токио" data-type="food" data-cost="3000" data-img="https://images.unsplash.com/photo-1558862107-d49ef2a04d72?q=80&w=800&auto=format&fit=crop">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JS for planner adding functionality -->
+    <script src="js/main.js"></script>
+</body>
+</html>

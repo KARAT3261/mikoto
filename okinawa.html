@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микото — Окинава</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .city-hero { height: 70vh; background: url('https://i.pinimg.com/1200x/7b/d5/14/7bd5148ece180ca84f0d7071adfde44a.jpg') center/cover; position: relative; display: flex; align-items: flex-end; padding-bottom: 60px; }
+        .city-hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0.2) 100%); z-index: 1; }
+        .city-header-content { position: relative; z-index: 2; }
+        .city-stats { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; }
+        .stat-box { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 12px 24px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1); }
+        .article-section { margin-bottom: 64px; }
+        .article-section h2 { margin-bottom: 24px; color: var(--primary); font-size: 32px; border-bottom: 1px solid var(--glass-border); padding-bottom: 12px; }
+        .article-text { font-size: 18px; line-height: 1.8; color: #ddd; margin-bottom: 24px; }
+        .landmark-list { display: flex; flex-direction: column; gap: 32px; }
+        .landmark-item { display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px; align-items: center; transition: var(--transition); }
+        .landmark-item:hover { border-color: var(--primary); background: rgba(30, 41, 59, 0.6); }
+        .landmark-item img { width: 300px; height: 200px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0; }
+        .landmark-content { flex: 1; }
+        .landmark-content h3 { font-size: 24px; margin-bottom: 12px; }
+        .landmark-content p { color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+        @media (max-width: 768px) { .landmark-item { flex-direction: column; } .landmark-item img { width: 100%; height: auto; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-torii-gate"></i> Микото<span>.</span></a>
+            <nav>
+                <ul>
+                    <li><a href="planner.html"><i class="fa-solid fa-map-location-dot"></i> Планировщик</a></li>
+                    <li><a href="cities.html" class="active">Города</a></li>
+                    <li><a href="culture.html">Культура</a></li>
+                    <li><a href="food.html">Еда</a></li>
+                    <li><a href="anime.html">Аниме</a></li>
+                    <li><a href="auth.html"><i class="fa-regular fa-user"></i> Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="city-hero">
+        <div class="container city-header-content">
+            <h1 style="font-size: 64px; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">Окинава <span style="color: var(--primary); font-family: var(--font-jp);">沖縄</span></h1>
+            <p style="font-size: 20px; color: #ddd; max-width: 600px; margin-top:16px;">Тропический рай Японии. Белоснежные пляжи, коралловые рифы и уникальная культура исчезнувшего королевства Рюкю.</p>
+            <div class="city-stats">
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Регион</div>
+                    <div style="font-weight: bold; font-size: 18px;">Окинава (Рюкю)</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Главный город</div>
+                    <div style="font-weight: bold; font-size: 18px;">Наха</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Главная особенность</div>
+                    <div style="font-weight: bold; font-size: 18px;">Пляжи и Долголетие</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container" style="padding: 64px 0;">
+        <section class="article-section">
+            <h2>Королевство Рюкю</h2>
+            <p class="article-text">Окинава — это совершенно иная Япония. Долгое время острова были независимым Королевством Рюкю, которое активно торговало с Китаем, Кореей и Юго-Восточной Азией. Это смешение культур породило уникальную архитектуру, музыку с использованием инструмента <em>сансин</em> и специфическую кухню.</p>
+            <p class="article-text">Окинава также является одной из "голубых зон" Земли — здесь живет самое большое количество долгожителей в мире. Секрет заключается в местной диете (основанной на батате, горькой дыне <em>гоя</em> и морепродуктах) и философии <em>икигай</em>.</p>
+        </section>
+
+        <section class="article-section">
+            <h2>Главные локации</h2>
+            <div class="landmark-list">
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/1200x/74/2d/d3/742dd398d5cc760b35348d86a24a0e44.jpg" alt="Пляж Исигаки">
+                    <div class="landmark-content">
+                        <h3>Остров Исигаки</h3>
+                        <p>Остров на крайнем юге архипелага с одними из самых красивых пляжей во всей Азии. Идеальное место для снорклинга и дайвинга: здесь можно поплавать с гигантскими скатами-мантами среди огромных коралловых рифов.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Остров Исигаки" data-city="Окинава" data-type="nature" data-cost="0" data-img="https://images.unsplash.com/photo-1589407353982-14eb02341bfa?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/1200x/b9/3e/60/b93e6032d5b544dd1b4ef01f3ed20c45.jpg" alt="Океанариум Тюрауми">
+                    <div class="landmark-content">
+                        <h3>Океанариум Тюрауми</h3>
+                        <p>Один из крупнейших океанариумов мира. Его главный аквариум Куросио настолько огромен, что в нем комфортно обитают несколько гигантских китовых акул и десятки мант.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Океанариум Тюрауми" data-city="Окинава" data-type="culture" data-cost="2180" data-img="https://images.unsplash.com/photo-1596773229654-e65b6ff4f09d?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/736x/c0/bb/b5/c0bbb5d5702825aa1e7e74e61973f040.jpg" alt="Замок Сюри">
+                    <div class="landmark-content">
+                        <h3>Замок Сюри (Наха)</h3>
+                        <p>Бывшая резиденция королей Рюкю. Отличается от классических японских замков ярким красным цветом и сильным китайским архитектурным влиянием. Объект Всемирного наследия ЮНЕСКО.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Замок Сюри" data-city="Наха" data-type="culture" data-cost="400" data-img="https://images.unsplash.com/photo-1627885741364-e1291ab25997?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

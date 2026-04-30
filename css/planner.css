@@ -1,0 +1,204 @@
+/* Planner Specific Styles */
+.planner-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 80px;
+  padding: 24px;
+  min-height: calc(100vh - 80px);
+}
+
+.search-places {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.search-places input {
+  width: 100%;
+  padding: 16px;
+  background: var(--bg-color-alt);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: #fff;
+  outline: none;
+}
+
+.place-card {
+  background: var(--bg-color-alt);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  cursor: grab;
+  transition: var(--transition);
+}
+.place-card:active {
+  cursor: grabbing;
+}
+.place-card:hover {
+  border-color: var(--primary);
+  transform: translateX(5px);
+}
+
+.place-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.place-info h4 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.place-info p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.place-info .tag {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+/* Main Area: Itinerary & Map */
+.planner-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Map Placeholder */
+.map-container {
+  height: 40%;
+  background: #2A3B4C; /* Placeholder map color */
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-container::after {
+  content: "Интерактивная карта (Google Maps / Mapbox)";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-muted);
+  font-family: var(--font-jp);
+}
+
+/* Itinerary Days */
+.itinerary-board {
+  flex: 1;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 24px;
+}
+
+.day-column {
+  min-width: 320px;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px dashed var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 12px;
+}
+
+.day-header h3 {
+  font-size: 20px;
+}
+.day-date {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Dropzone */
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-to-day-btn {
+  flex: 1;
+  min-height: 60px;
+  border: 2px dashed rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.02);
+  color: var(--text-muted);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.add-to-day-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(255,255,255,0.05);
+}
+
+.dropzone.drag-over {
+  background: rgba(211, 47, 47, 0.1);
+  border: 1px dashed var(--primary);
+}
+
+.itinerary-item {
+  background: var(--bg-color-alt);
+  border-left: 4px solid var(--primary);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.itinerary-item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.time-slot {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Budget Panel */
+.budget-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.budget-total {
+  font-size: 24px;
+  font-family: var(--font-jp);
+  color: var(--text-color);
+}
+.budget-total span {
+  color: var(--primary);
+}

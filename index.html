@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микото — Ваш проводник по Японии</title>
+    <meta name="description" content="Интерактивный гид по Японии: планировщик маршрутов, культура, достопримечательности, аниме-споты и гастрономия.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-torii-gate"></i>
+                Микото<span>.</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="planner.html" data-i18n="nav_planner"><i class="fa-solid fa-map-location-dot"></i> Планировщик</a></li>
+                    <li><a href="cities.html" data-i18n="nav_cities">Города</a></li>
+                    <li><a href="culture.html" data-i18n="nav_culture">Культура</a></li>
+                    <li><a href="food.html" data-i18n="nav_food">Еда</a></li>
+                    <li><a href="anime.html" data-i18n="nav_anime">Аниме</a></li>
+                    <li><a href="auth.html" data-i18n="nav_profile"><i class="fa-regular fa-user"></i> Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Optional: Replace src with an actual video file or use image background -->
+        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" class="hero-video" alt="Токио Сакура" />
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content animate-fade-in">
+            <h1>Откройте настоящую Японию</h1>
+            <p>Создайте свой идеальный маршрут: от неоновых улиц Акихабары до тихих храмов Киото.</p>
+            
+            <div class="hero-search glass-panel">
+                <input type="text" class="search-input" id="hero-search-input" data-i18n="search_placeholder" placeholder="Куда отправимся? (Токио, Киото...)">
+                <select class="search-select">
+                    <option value="">Тип отдыха</option>
+                    <option value="culture">Храмы и культура</option>
+                    <option value="food">Гастро-тур</option>
+                    <option value="anime">Аниме и гик</option>
+                    <option value="nature">Природа</option>
+                </select>
+                <button class="btn-primary" onclick="const q = document.getElementById('hero-search-input').value; window.location.href='planner.html?q=' + encodeURIComponent(q);">
+                    Поиск <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div style="margin-top: 32px;">
+                <button class="btn-primary" onclick="window.location.href='planner.html'"><i class="fa-solid fa-wand-magic-sparkles"></i> Начать путешествие</button>
+                <button class="btn-secondary" onclick="document.getElementById('popular-routes').scrollIntoView({behavior: 'smooth'})">Популярные маршруты</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Routes Section -->
+    <section class="section container" id="popular-routes" style="padding-top: 60px;">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Популярные маршруты</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Готовые планы от экспертов</p>
+            </div>
+        </div>
+        <div class="grid-3" style="margin-top: 0;">
+            <div class="card" onclick="window.location.href='planner.html'">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" alt="Золотой маршрут">
+                <div class="card-content">
+                    <h3 class="card-title">Золотой маршрут (7 дней)</h3>
+                    <p style="color:#ddd; font-size:14px;">Токио → Киото → Осака</p>
+                </div>
+            </div>
+            <div class="card" onclick="window.location.href='planner.html'">
+                <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=800" alt="Аниме тур">
+                <div class="card-content">
+                    <h3 class="card-title">Путь Отаку (5 дней)</h3>
+                    <p style="color:#ddd; font-size:14px;">Акихабара, Ден Ден Таун, Музей Ghibli</p>
+                </div>
+            </div>
+            <div class="card" onclick="window.location.href='planner.html'">
+                <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=800" alt="Гастро тур">
+                <div class="card-content">
+                    <h3 class="card-title">Гастро-тур (3 дня)</h3>
+                    <p style="color:#ddd; font-size:14px;">Стрит-фуд Осаки и рынки Токио</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations Section -->
+    <section class="section container" id="cities">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Популярные направления</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Места, которые должен посетить каждый</p>
+            </div>
+            <a href="cities.html" class="btn-secondary">Все регионы</a>
+        </div>
+        
+        <div class="grid-3">
+            <!-- Card 1 -->
+            <div class="card" onclick="window.location.href='tokyo.html'">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1994&auto=format&fit=crop" alt="Токио">
+                <div class="card-content">
+                    <div class="card-meta">Неоновый мегаполис</div>
+                    <h3 class="card-title">Токио</h3>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card" onclick="window.location.href='kyoto.html'">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Киото">
+                <div class="card-content">
+                    <div class="card-meta">Душа Японии</div>
+                    <h3 class="card-title">Киото</h3>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card" onclick="window.location.href='osaka.html'">
+                <img src="https://i.pinimg.com/1200x/3b/8d/14/3b8d149be62653340aa90e4c092a116f.jpg" alt="Осака">
+                <div class="card-content">
+                    <div class="card-meta">Кулинарная столица</div>
+                    <h3 class="card-title">Осака</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

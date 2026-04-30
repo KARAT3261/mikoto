@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микото — Хоккайдо</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .city-hero { height: 70vh; background: url('https://i.pinimg.com/736x/c8/ab/05/c8ab05df7d5116bdf8cd2e4f97b9505d.jpg') center/cover; position: relative; display: flex; align-items: flex-end; padding-bottom: 60px; }
+        .city-hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0.2) 100%); z-index: 1; }
+        .city-header-content { position: relative; z-index: 2; }
+        .city-stats { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; }
+        .stat-box { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 12px 24px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1); }
+        .article-section { margin-bottom: 64px; }
+        .article-section h2 { margin-bottom: 24px; color: var(--primary); font-size: 32px; border-bottom: 1px solid var(--glass-border); padding-bottom: 12px; }
+        .article-text { font-size: 18px; line-height: 1.8; color: #ddd; margin-bottom: 24px; }
+        .landmark-list { display: flex; flex-direction: column; gap: 32px; }
+        .landmark-item { display: flex; gap: 32px; background: rgba(30, 41, 59, 0.4); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 24px; align-items: center; transition: var(--transition); }
+        .landmark-item:hover { border-color: var(--primary); background: rgba(30, 41, 59, 0.6); }
+        .landmark-item img { width: 300px; height: 200px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0; }
+        .landmark-content { flex: 1; }
+        .landmark-content h3 { font-size: 24px; margin-bottom: 12px; }
+        .landmark-content p { color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+        @media (max-width: 768px) { .landmark-item { flex-direction: column; } .landmark-item img { width: 100%; height: auto; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-torii-gate"></i> Микото<span>.</span></a>
+            <nav>
+                <ul>
+                    <li><a href="planner.html"><i class="fa-solid fa-map-location-dot"></i> Планировщик</a></li>
+                    <li><a href="cities.html" class="active">Города</a></li>
+                    <li><a href="culture.html">Культура</a></li>
+                    <li><a href="food.html">Еда</a></li>
+                    <li><a href="anime.html">Аниме</a></li>
+                    <li><a href="auth.html"><i class="fa-regular fa-user"></i> Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="city-hero">
+        <div class="container city-header-content">
+            <h1 style="font-size: 64px; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">Хоккайдо <span style="color: var(--primary); font-family: var(--font-jp);">北海道</span></h1>
+            <p style="font-size: 20px; color: #ddd; max-width: 600px; margin-top:16px;">Самый северный остров Японии. Зимняя сказка, невероятная природа, горячие источники и лучшие морепродукты во всей стране.</p>
+            <div class="city-stats">
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Регион</div>
+                    <div style="font-weight: bold; font-size: 18px;">Хоккайдо</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Главный город</div>
+                    <div style="font-weight: bold; font-size: 18px;">Саппоро</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 12px; color: var(--text-muted);">Главная особенность</div>
+                    <div style="font-weight: bold; font-size: 18px;">Снег и Природа</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container" style="padding: 64px 0;">
+        <section class="article-section">
+            <h2>Дикий север Японии</h2>
+            <p class="article-text">Хоккайдо кардинально отличается от остальной Японии. Здесь нет плотной застройки и небоскрёбов до горизонта — вместо этого огромные национальные парки, кристально чистые озера, действующие вулканы и бескрайние поля лаванды в Фурано.</p>
+            <p class="article-text">Зимой Хоккайдо превращается в рай для горнолыжников: снег здесь называют "japow" (Japanese powder) за его невероятную пушистость и качество. Кроме того, Хоккайдо — родина народа Айну, коренных жителей севера с уникальной культурой и языком.</p>
+        </section>
+
+        <section class="article-section">
+            <h2>Главные локации</h2>
+            <div class="landmark-list">
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/1200x/4d/90/ad/4d90adc132f809a7a22d5e5b18a2d1e3.jpg" alt="Парк Одори">
+                    <div class="landmark-content">
+                        <h3>Парк Одори (Саппоро)</h3>
+                        <p>Парк длиной полтора километра, разрезающий центр Саппоро. Зимой здесь проходит всемирно известный Снежный фестиваль (Yuki Matsuri), где возводят гигантские скульптуры изо льда и снега высотой с многоэтажные дома.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Парк Одори" data-city="Саппоро" data-type="nature" data-cost="0" data-img="https://images.unsplash.com/photo-1558284556-32d56a73c1fa?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+                <div class="landmark-item">
+                    <img src="https://images.unsplash.com/photo-1618218168350-6e7c81151b64?q=80&w=800&auto=format&fit=crop" alt="Музей пива Саппоро">
+                    <div class="landmark-content">
+                        <h3>Музей пива Саппоро</h3>
+                        <p>Единственный в Японии музей, полностью посвященный истории пивоварения. Здание из красного кирпича эпохи Мэйдзи. После экскурсии можно насладиться дегустацией свежайшего пива и местным блюдом "Чингисхан" (жареная баранина).</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Музей пива Саппоро" data-city="Саппоро" data-type="food" data-cost="2000" data-img="https://images.unsplash.com/photo-1618218168350-6e7c81151b64?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+                <div class="landmark-item">
+                    <img src="https://i.pinimg.com/1200x/39/88/85/398885fc3f3abbcf069ebb2393058a02.jpg" alt="Нисеко">
+                    <div class="landmark-content">
+                        <h3>Курорт Нисеко</h3>
+                        <p>Один из лучших горнолыжных курортов мира. Нисеко славится своими обильными снегопадами, прекрасными трассами для фрирайда и множеством онсэнов (горячих источников) для отдыха после катания.</p>
+                        <button class="btn-primary add-to-plan-btn" data-name="Нисеко" data-city="Хоккайдо" data-type="nature" data-cost="8000" data-img="https://images.unsplash.com/photo-1605634563721-a37a54917415?q=80&w=800">
+                            <i class="fa-solid fa-plus"></i> Добавить в маршрут
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

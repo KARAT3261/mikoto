@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микото — Города и Регионы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-torii-gate"></i> Микото<span>.</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="planner.html"><i class="fa-solid fa-map-location-dot"></i> Планировщик</a></li>
+                    <li><a href="cities.html" class="active">Города</a></li>
+                    <li><a href="culture.html">Культура</a></li>
+                    <li><a href="food.html">Еда</a></li>
+                    <li><a href="anime.html">Аниме</a></li>
+                    <li><a href="auth.html"><i class="fa-regular fa-user"></i> Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section container" style="padding-top: 120px;">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Все регионы Японии</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Выберите направление для своего следующего приключения</p>
+            </div>
+        </div>
+
+        <div class="grid-3">
+            <div class="card" onclick="window.location.href='tokyo.html'">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1994&auto=format&fit=crop" alt="Токио">
+                <div class="card-content">
+                    <div class="card-meta">Канто</div>
+                    <h3 class="card-title">Токио</h3>
+                </div>
+            </div>
+            
+            <div class="card" onclick="window.location.href='kyoto.html'">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" alt="Киото">
+                <div class="card-content">
+                    <div class="card-meta">Кансай</div>
+                    <h3 class="card-title">Киото</h3>
+                </div>
+            </div>
+            
+            <div class="card" onclick="window.location.href='osaka.html'">
+                <img src="https://i.pinimg.com/1200x/3b/8d/14/3b8d149be62653340aa90e4c092a116f.jpg" alt="Осака">
+                <div class="card-content">
+                    <div class="card-meta">Кансай</div>
+                    <h3 class="card-title">Осака</h3>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='hokkaido.html'">
+                <img src="https://i.pinimg.com/736x/c8/ab/05/c8ab05df7d5116bdf8cd2e4f97b9505d.jpg" alt="Хоккайдо">
+                <div class="card-content">
+                    <div class="card-meta">Хоккайдо</div>
+                    <h3 class="card-title">Саппоро</h3>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='okinawa.html'">
+                <img src="https://i.pinimg.com/1200x/7b/d5/14/7bd5148ece180ca84f0d7071adfde44a.jpg" alt="Окинава">
+                <div class="card-content">
+                    <div class="card-meta">Рюкю</div>
+                    <h3 class="card-title">Окинава</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

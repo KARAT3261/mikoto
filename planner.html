@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микото — Планировщик маршрута</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/planner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet CSS for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body class="planner-page">
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-torii-gate"></i>
+                Микото<span>.</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="planner.html" class="active"><i class="fa-solid fa-map-location-dot"></i> Планировщик</a></li>
+                    <li><a href="cities.html">Города</a></li>
+                    <li><a href="food.html">Еда</a></li>
+                    <li><a href="auth.html"><i class="fa-regular fa-user"></i> Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="planner-layout">
+        
+        <!-- Main Planner Area (Full Width) -->
+        <main class="planner-main">
+            
+            <div class="budget-panel glass-panel">
+                <div>
+                    <h2>Ваш Маршрут</h2>
+                    <p style="color:var(--text-muted); font-size:14px;">Перетащите карточки в дни, чтобы составить план.</p>
+                </div>
+                <div class="budget-total">
+                    Ориентировочно: <span id="budget-amount">0</span> ¥
+                </div>
+                <button class="btn-primary" id="save-plan-btn"><i class="fa-solid fa-cloud-arrow-up"></i> Сохранить</button>
+            </div>
+
+            <!-- Map Area -->
+            <div id="planner-map" class="map-container glass-panel" style="z-index: 1;">
+                <!-- Map will be rendered here by Leaflet -->
+            </div>
+
+            <!-- Days Itinerary Area -->
+            <div class="itinerary-board" id="itinerary-board">
+                <!-- Day 1 -->
+                <div class="day-column">
+                    <div class="day-header">
+                        <h3>День 1</h3>
+                        <span class="day-date">Токио</span>
+                    </div>
+                    <div class="dropzone" id="day-1" data-day="1">
+                        <!-- Items will be dropped here -->
+                    </div>
+                    <button class="add-to-day-btn" onclick="openPlaceSelector('День 1')">
+                        <i class="fa-solid fa-plus" style="margin-right:8px;"></i> Добавить место
+                    </button>
+                </div>
+                <!-- Day 2 -->
+                <div class="day-column">
+                    <div class="day-header">
+                        <h3>День 2</h3>
+                        <span class="day-date">Токио -> Киото</span>
+                    </div>
+                    <div class="dropzone" id="day-2" data-day="2">
+                    </div>
+                    <button class="add-to-day-btn" onclick="openPlaceSelector('День 2')">
+                        <i class="fa-solid fa-plus" style="margin-right:8px;"></i> Добавить место
+                    </button>
+                </div>
+                <!-- Add new day button -->
+                <button class="btn-secondary" id="add-day-btn" style="height:fit-content; white-space:nowrap;">
+                    <i class="fa-solid fa-plus"></i> Добавить день
+                </button>
+            </div>
+        </main>
+    </div>
+
+
+
+    <!-- Place Selector Modal -->
+    <div class="modal" id="place-selector-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:3000; justify-content:center; align-items:center;">
+        <div class="modal-content glass-panel" style="width:90%; max-width:600px; max-height:80vh; display:flex; flex-direction:column; padding:24px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                <h3 id="modal-day-title">Добавить в день</h3>
+                <button onclick="document.getElementById('place-selector-modal').style.display='none'" style="background:none; border:none; color:var(--text-color); font-size:24px; cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="auth-tabs" style="display:flex; margin-bottom:16px; border-bottom:1px solid var(--glass-border);">
+                <div class="auth-tab active" id="tab-my-route" onclick="switchModalTab('my-route')" style="flex:1; text-align:center; padding:12px; cursor:pointer; color:var(--primary); border-bottom:2px solid var(--primary);">Мой маршрут</div>
+                <div class="auth-tab" id="tab-all-places" onclick="switchModalTab('all-places')" style="flex:1; text-align:center; padding:12px; cursor:pointer; color:var(--text-muted);">Все локации</div>
+            </div>
+            
+            <div style="margin-bottom: 16px;">
+                <input type="text" id="modal-place-search" placeholder="Поиск..." style="width:100%; padding:12px; border-radius:8px; border:1px solid var(--glass-border); background:rgba(255,255,255,0.1); color:#fff;">
+            </div>
+
+            <div id="modal-places-list" style="flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:12px;">
+                <!-- Places rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Logic -->
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/planner.js"></script>
+</body>
+</html>

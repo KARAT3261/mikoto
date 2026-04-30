@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микото — Японская кухня</title>
+    <meta name="description" content="Гид по японской гастрономии: суши, рамен, уличная еда, правила этикета и сборка гастро-тура.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/food.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-torii-gate"></i>
+                Микото<span>.</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="planner.html"><i class="fa-solid fa-map-location-dot"></i> Планировщик</a></li>
+                    <li><a href="cities.html">Города</a></li>
+                    <li><a href="culture.html">Культура</a></li>
+                    <li><a href="food.html" class="active">Еда</a></li>
+                    <li><a href="anime.html">Аниме</a></li>
+                    <li><a href="auth.html"><i class="fa-regular fa-user"></i> Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Food Hero Section -->
+    <section class="food-hero">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=2000&auto=format&fit=crop" alt="Японская кухня">
+        
+        <div class="hero-content animate-fade-in" style="z-index: 1;">
+            <h1>Искусство вкуса</h1>
+            <p>От изысканных суши до горячего стрит-фуда Осаки. Откройте для себя гастрономический мир Японии.</p>
+            <a href="#dishes" class="btn-primary"><i class="fa-solid fa-utensils"></i> Исследовать меню</a>
+        </div>
+    </section>
+
+    <!-- Traditional Dishes Section -->
+    <section id="dishes" class="section container">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Культурные блюда</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Основа японской гастрономии</p>
+            </div>
+        </div>
+
+        <div class="dish-grid">
+            <!-- Sushi -->
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800&auto=format&fit=crop" alt="Суши">
+                <div class="dish-info">
+                    <h3>
+                        <span>Суши <span class="jp-name">寿司</span></span>
+                        <button class="add-food-btn" data-name="Суши" data-cost="2000" data-img="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800"><i class="fa-solid fa-plus"></i></button>
+                    </h3>
+                    <p>Идеальный баланс риса, уксуса и свежайшей рыбы. Каждая деталь имеет значение: от температуры риса до нарезки сашими.</p>
+                    <div class="dish-tags">
+                        <span>Сырая рыба</span>
+                        <span>Рис</span>
+                        <span>Токио</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ramen -->
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?q=80&w=800&auto=format&fit=crop" alt="Рамен">
+                <div class="dish-info">
+                    <h3>
+                        <span>Рамен <span class="jp-name">ラーメン</span></span>
+                        <button class="add-food-btn" data-name="Рамен" data-cost="1000" data-img="https://images.unsplash.com/photo-1557872943-16a5ac26437e?q=80&w=800"><i class="fa-solid fa-plus"></i></button>
+                    </h3>
+                    <p>Наваристый бульон (тонкоцу, сёю, мисо), пшеничная лапша, ломтики свинины тясю и яйцо аджитама. Душа японского фаст-фуда.</p>
+                    <div class="dish-tags">
+                        <span>Горячее</span>
+                        <span>Лапша</span>
+                        <span>Фукуока</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Takoyaki -->
+            <div class="dish-card">
+                <img src="https://tabitabi.ru/_engine/picture/13/295.jpg" alt="Такояки">
+                <div class="dish-info">
+                    <h3>
+                        <span>Такояки <span class="jp-name">たこ焼き</span></span>
+                        <button class="add-food-btn" data-name="Такояки" data-cost="500" data-img="https://images.unsplash.com/photo-1598134493179-51332e56807f?q=80&w=800"><i class="fa-solid fa-plus"></i></button>
+                    </h3>
+                    <p>Шарики из жидкого теста с кусочками осьминога внутри, политые специальным соусом, майонезом и стружкой тунца бонито.</p>
+                    <div class="dish-tags">
+                        <span>Стрит-фуд</span>
+                        <span>Осака</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wagyu -->
+            <div class="dish-card">
+                <img src="https://korfood.ru/upload/iblock/15f/yj98l8hiaez5kivmakiheczpn03yrp04/myaso_vagyu_kobe_khanu_pochemu_ono_takoe_dorogoe_i_kak_ego_prigotovit.webp" alt="Вагю">
+                <div class="dish-info">
+                    <h3>Мраморная говядина Вагю <span class="jp-name">和牛</span></h3>
+                    <p>Знаменитое японское мясо с тающей во рту текстурой и высочайшей степенью мраморности. Вершина мясной кулинарии.</p>
+                    <div class="dish-tags">
+                        <span>Премиум</span>
+                        <span>Кобе</span>
+                        <span>Мясо</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Okonomiyaki -->
+            <div class="dish-card">
+                <img src="https://i.pinimg.com/736x/e6/9b/44/e69b44c4332cd0e4ceac85c122d9b244.jpg" alt="Окономияки">
+                <div class="dish-info">
+                    <h3>Окономияки <span class="jp-name">お好み焼き</span></h3>
+                    <p>Японская жареная пицца или блин, состоящий из капусты, мяса, морепродуктов и лапши, жарящийся прямо на столе перед вами.</p>
+                    <div class="dish-tags">
+                        <span>Жареное</span>
+                        <span>Хиросима</span>
+                        <span>Осака</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Matcha -->
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=800&auto=format&fit=crop" alt="Матча">
+                <div class="dish-info">
+                    <h3>Матча и Десерты <span class="jp-name">抹茶</span></h3>
+                    <p>Традиционный порошковый зелёный чай, используемый в чайной церемонии, а также основа для сотен японских десертов.</p>
+                    <div class="dish-tags">
+                        <span>Сладкое</span>
+                        <span>Чай</span>
+                        <span>Киото</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Etiquette Section -->
+    <section class="etiquette-section">
+        <div class="container etiquette-grid">
+            <div>
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800&auto=format&fit=crop" alt="Этикет" style="width: 100%; border-radius: var(--radius-lg); box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+            </div>
+            <div>
+                <h2 class="section-title" style="margin-bottom: 40px;">Правила поведения</h2>
+                <div class="etiquette-list">
+                    <div class="etiquette-item">
+                        <div class="etiquette-icon"><i class="fa-solid fa-hands-praying"></i></div>
+                        <div>
+                            <h4>Итадакимасу и Гочисосама</h4>
+                            <p>Перед едой принято говорить «Итадакимасу» (с благодарностью принимаю), а после — «Гочисосама дэсита» (спасибо за угощение).</p>
+                        </div>
+                    </div>
+                    <div class="etiquette-item">
+                        <div class="etiquette-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+                        <div>
+                            <h4>Палочки для еды (Хаси)</h4>
+                            <p>Никогда не втыкайте палочки вертикально в рис и не передавайте еду из палочек в палочки — это ассоциируется с похоронными ритуалами.</p>
+                        </div>
+                    </div>
+                    <div class="etiquette-item">
+                        <div class="etiquette-icon"><i class="fa-solid fa-volume-high"></i></div>
+                        <div>
+                            <h4>Хлюпать лапшой — это хорошо</h4>
+                            <p>Во время поедания рамена или удона громкое втягивание лапши (сёрпанье) считается знаком того, что вам вкусно, а также помогает остудить блюдо.</p>
+                        </div>
+                    </div>
+                    <div class="etiquette-item">
+                        <div class="etiquette-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                        <div>
+                            <h4>Никаких чаевых</h4>
+                            <p>В Японии не принято оставлять чаевые. Отличный сервис уже включен в стоимость, и попытка оставить деньги может вызвать смущение у персонала.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Feature: Gastro Tour -->
+    <section class="container">
+        <div class="gastro-cta glass-panel">
+            <div class="gastro-cta-content">
+                <h2>Собери свой гастро-тур</h2>
+                <p>Добавьте лучшие рестораны и стрит-фуд точки в свой маршрут с помощью нашего интерактивного планировщика.</p>
+                <a href="planner.html" class="btn-primary" style="font-size: 18px; padding: 16px 32px;">
+                    <i class="fa-solid fa-utensils"></i> Начать планирование
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
