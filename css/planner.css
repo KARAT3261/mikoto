@@ -283,3 +283,39 @@
 .auth-tab:hover:not(.active) {
   background: rgba(255, 255, 255, 0.05);
 }
+
+/* Responsive Planner */
+@media (max-width: 768px) {
+    .planner-layout {
+        height: auto;
+        overflow: visible;
+        margin-top: 140px; /* More space for stacked header */
+    }
+    .planner-main {
+        padding: 12px;
+    }
+    .budget-panel {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 20px;
+    }
+    .budget-total {
+        font-size: 20px;
+    }
+    .map-container {
+        height: 300px;
+    }
+    .itinerary-board {
+        padding: 10px;
+        gap: 16px;
+    }
+    .day-column {
+        min-width: 280px;
+    }
+    .board-scroll-btn {
+        width: 40px;
+        height: 40px;
+        top: 60px;
+    }
+}

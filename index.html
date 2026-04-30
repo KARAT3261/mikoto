@@ -41,18 +41,9 @@
             <h1>Откройте настоящую Японию</h1>
             <p>Создайте свой идеальный маршрут: от неоновых улиц Акихабары до тихих храмов Киото.</p>
             
-            <div class="hero-search glass-panel">
-                <input type="text" class="search-input" id="hero-search-input" data-i18n="search_placeholder" placeholder="Куда отправимся? (Токио, Киото...)">
-                <select class="search-select">
-                    <option value="">Тип отдыха</option>
-                    <option value="culture">Храмы и культура</option>
-                    <option value="food">Гастро-тур</option>
-                    <option value="anime">Аниме и гик</option>
-                    <option value="nature">Природа</option>
-                </select>
-                <button class="btn-primary" onclick="const q = document.getElementById('hero-search-input').value; window.location.href='planner.html?q=' + encodeURIComponent(q);">
-                    Поиск <i class="fa-solid fa-arrow-right"></i>
-                </button>
+            <div class="hero-search glass-panel" style="max-width: 600px; margin: 0 auto; display: block;">
+                <input type="text" class="search-input" id="hero-search-input" data-i18n="search_placeholder" placeholder="Куда отправимся? (Токио, Киото...)" style="width: 100%; border-radius: 12px; border: none;">
+                <div id="search-results" class="search-results glass-panel"></div>
             </div>
             
             <div style="margin-top: 32px;">
@@ -138,5 +129,70 @@
 
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('hero-search-input');
+            const resultsBox = document.getElementById('search-results');
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                if (query.length < 2) {
+                    resultsBox.style.display = 'none';
+                    return;
+                }
+
+                const matches = MOCK_PLACES.filter(p => 
+                    p.name.toLowerCase().includes(query) || 
+                    p.city.toLowerCase().includes(query)
+                ).slice(0, 5);
+
+                if (matches.length > 0) {
+                    resultsBox.innerHTML = matches.map(p => `
+                        <div class="search-result-item" onclick="window.location.href='planner.html?q=${encodeURIComponent(p.name)}'">
+                            <div class="item-info">
+                                <img src="${p.img}" alt="${p.name}">
+                                <div>
+                                    <h4>${p.name}</h4>
+                                    <p>${p.city}</p>
+                                </div>
+                            </div>
+                            <div class="add-btn" onclick="event.stopPropagation(); addToPlanFromSearch('${p.id}')">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    `).join('');
+                    resultsBox.style.display = 'block';
+                } else {
+                    resultsBox.style.display = 'none';
+                }
+            });
+
+            // Close search results when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!searchInput.contains(e.target) && !resultsBox.contains(e.target)) {
+                    resultsBox.style.display = 'none';
+                }
+            });
+        });
+
+        function addToPlanFromSearch(id) {
+            const place = MOCK_PLACES.find(p => p.id === id);
+            if (!place) return;
+
+            // Add to state
+            const newItem = {
+                ...place,
+                id: 'search_' + Date.now()
+            };
+
+            if (!MIKOTO_STATE.plannerItems.find(i => i.name === place.name)) {
+                MIKOTO_STATE.plannerItems.push(newItem);
+                saveState();
+            }
+
+            if (window.renderDrawer) window.renderDrawer();
+            document.getElementById('route-drawer').classList.add('open');
+        }
+    </script>
 </body>
 </html>
